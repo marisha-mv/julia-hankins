@@ -1,0 +1,3341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Julia Hankins - Million Dollar Mindframe | Funnel Audit Proposal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --red: #ff0000;
+            --black: #0a0a0a;
+            --white: #ffffff;
+            --gray-dark: #1a1a1a;
+            --gray-medium: #666666;
+            --gray-light: #cccccc;
+            --gold: #d4af37;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--black);
+            color: var(--white);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--gray-dark);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.5rem 1.5rem;
+        }
+
+        nav a {
+            color: var(--gray-light);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: color 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        nav a:hover {
+            color: var(--red);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 6rem 0;
+            text-align: center;
+            background: linear-gradient(180deg, var(--black) 0%, var(--gray-dark) 100%);
+        }
+
+        .hero h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 4rem;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--gray-light);
+            margin-bottom: 2rem;
+        }
+
+        .hero-red {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 6rem;
+            font-weight: 900;
+            color: var(--red);
+            line-height: 1;
+            display: block;
+            margin: 1rem 0;
+        }
+
+        .hero-details {
+            font-size: 1.1rem;
+            color: var(--gray-light);
+            margin-top: 1rem;
+        }
+
+        .hero-details strong {
+            color: var(--white);
+        }
+
+        .prepared-by {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: var(--gray-medium);
+        }
+
+        /* Sections */
+        .section {
+            padding: 5rem 0;
+            border-bottom: 1px solid var(--gray-dark);
+        }
+
+        .section-red {
+            background: var(--red);
+        }
+
+        .section-red * {
+            color: var(--white) !important;
+        }
+
+        .section-red .roi-table {
+            background: rgba(0, 0, 0, 0.3);
+            border-color: var(--white);
+        }
+
+        h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.5rem;
+            letter-spacing: 0.05em;
+            margin-bottom: 2rem;
+            color: var(--white);
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--white);
+        }
+
+        p {
+            color: var(--gray-light);
+            margin-bottom: 1rem;
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .stat-card {
+            background: var(--gray-dark);
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #333;
+        }
+
+        .stat-value {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.5rem;
+            color: var(--red);
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--gray-light);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* ROI Tables */
+        .roi-table {
+            background: var(--gray-dark);
+            border: 3px solid var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            margin: 2rem 0;
+        }
+
+        .roi-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid #333;
+        }
+
+        .roi-row:last-child {
+            border-bottom: none;
+        }
+
+        .roi-row:nth-child(even) {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .roi-value {
+            color: var(--red);
+            font-weight: 700;
+        }
+
+        .roi-highlight {
+            background: var(--red);
+            color: var(--white);
+        }
+
+        .roi-highlight span {
+            color: var(--white);
+        }
+
+        /* Recommendation Cards */
+        .recommendations {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .rec-card {
+            background: var(--gray-dark);
+            border-left: 4px solid var(--red);
+            padding: 2rem;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .rec-number {
+            display: inline-block;
+            background: var(--red);
+            color: var(--white);
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 32px;
+            font-weight: 700;
+            margin-right: 1rem;
+        }
+
+        .rec-title {
+            display: inline;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .rec-content {
+            margin-top: 1rem;
+            padding-left: 2.5rem;
+        }
+
+        /* Code Examples */
+        .code-example {
+            background: var(--black);
+            color: var(--gray-light);
+            font-family: 'Courier New', monospace;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            white-space: pre-line;
+            font-size: 0.9rem;
+            border-left: 3px solid var(--red);
+        }
+
+        /* Before/After Boxes */
+        .before-after {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .before-box {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid #333;
+        }
+
+        .after-box {
+            background: rgba(255, 0, 0, 0.1);
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid var(--red);
+        }
+
+        .before-box h4, .after-box h4 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .before-box h4 {
+            color: var(--gray-medium);
+        }
+
+        .after-box h4 {
+            color: var(--red);
+        }
+
+        /* Check Lists */
+        .check-list {
+            list-style: none;
+            margin: 1rem 0;
+        }
+
+        .check-list li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--gray-light);
+        }
+
+        .check-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--red);
+            font-weight: 700;
+        }
+
+        /* Impact Badges */
+        .impact-badge {
+            display: inline-block;
+            background: var(--red);
+            color: var(--white);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: 0.75rem 1.5rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-top: 1rem;
+            border-radius: 4px;
+        }
+
+        /* Crisis Box */
+        .crisis-box {
+            background: linear-gradient(135deg, rgba(255, 0, 0, 0.2) 0%, rgba(255, 0, 0, 0.05) 100%);
+            border: 2px solid var(--red);
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .crisis-box h3 {
+            color: var(--red);
+            margin-bottom: 1rem;
+        }
+
+        /* Strength Box */
+        .strength-box {
+            background: linear-gradient(135deg, rgba(0, 200, 100, 0.1) 0%, rgba(0, 200, 100, 0.02) 100%);
+            border: 2px solid #00c864;
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .strength-box h3 {
+            color: #00c864;
+            margin-bottom: 1rem;
+        }
+
+        /* Benchmark Table */
+        .benchmark-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+        }
+
+        .benchmark-table th,
+        .benchmark-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #333;
+        }
+
+        .benchmark-table th {
+            background: var(--gray-dark);
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.05em;
+        }
+
+        .benchmark-table tr:nth-child(even) {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .status-crisis {
+            color: var(--red);
+            font-weight: 600;
+        }
+
+        .status-good {
+            color: #00c864;
+            font-weight: 600;
+        }
+
+        .status-warning {
+            color: #ffa500;
+            font-weight: 600;
+        }
+
+        /* Roadmap */
+        .roadmap {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .roadmap-phase {
+            background: var(--gray-dark);
+            padding: 2rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--red);
+        }
+
+        .roadmap-phase h4 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.5rem;
+            color: var(--red);
+            margin-bottom: 1rem;
+        }
+
+        /* Footer CTA */
+        .footer-cta {
+            background: var(--red);
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        .footer-cta h2 {
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .footer-cta p {
+            color: var(--white);
+            font-size: 1.25rem;
+        }
+
+        /* Key Insight Box */
+        .key-insight {
+            background: var(--red);
+            color: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        .key-insight h4 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .key-insight p {
+            color: var(--white);
+            margin: 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-red {
+                font-size: 3.5rem;
+            }
+
+            .before-after {
+                grid-template-columns: 1fr;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="container">
+        <ul>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#tiktok-ads">TikTok Ads</a></li>
+            <li><a href="#landing-page">Landing Page</a></li>
+            <li><a href="#thank-you">Thank You Page</a></li>
+            <li><a href="#vip-upsell">VIP Upsell</a></li>
+            <li><a href="#email-sequence">Email Sequence</a></li>
+            <li><a href="#webinar">Webinar Content</a></li>
+            <li><a href="#post-webinar">Post-Webinar</a></li>
+            <li><a href="#sales-process">Sales Process</a></li>
+            <li><a href="#roadmap">90-Day Roadmap</a></li>
+        </ul>
+    </div>
+</nav>
+
+<section class="hero">
+    <div class="container">
+        <h1>JULIA HANKINS</h1>
+        <p class="hero-subtitle">Million Dollar Mindframe | Webinar Funnel Optimization Proposal</p>
+        <span class="hero-red">$842,400</span>
+        <p style="font-size: 1.5rem; color: var(--white);">Additional Annual Revenue Opportunity</p>
+        <p class="hero-details">
+            Fix <strong>Call Booking Rate</strong> + <strong>Post-Webinar Sequence</strong> + <strong>Positioning Clarity</strong> = <strong>310% Growth</strong>
+        </p>
+        <p class="prepared-by">Prepared by WeConquer Media | March 2026</p>
+    </div>
+</section>
+
+<section id="overview" class="section">
+    <div class="container">
+        <h2>EXECUTIVE OVERVIEW</h2>
+
+        <p style="font-size: 1.1rem; color: var(--white);">Julia, your funnel has strong foundations but is leaving massive revenue on the table due to three critical bottlenecks. Here's your current state:</p>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-value">$271,200</div>
+                <div class="stat-label">Current Annual Revenue</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">$14.85</div>
+                <div class="stat-label">Average CPL</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">25.4%</div>
+                <div class="stat-label">Show-Up Rate</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">7.2%</div>
+                <div class="stat-label">Attendee-to-Booking Rate</div>
+            </div>
+        </div>
+
+        <div class="crisis-box">
+            <h3>CRISIS #1: Call Booking Rate is Leaking Revenue</h3>
+            <p>Only <strong>7.2%</strong> of webinar attendees book a call. Industry standard for high-ticket offers is 15-25%. You're getting ~70 attendees per webinar but only 5-11 booked calls. That's 10-15 lost potential sales per webinar.</p>
+            <p><strong>Root Cause:</strong> Webinar ends without clear call-to-action urgency. No scarcity on call slots. No "application fee" barrier to filter tire-kickers.</p>
+            <p><strong>Opportunity:</strong> Doubling booking rate from 7% to 15% = 2X more sales calls per webinar</p>
+        </div>
+
+        <div class="crisis-box">
+            <h3>CRISIS #2: No Real Post-Webinar Urgency Sequence</h3>
+            <p>Your current post-webinar sequence is 3 generic emails. No urgency escalation. No spot countdown. No objection handling. No case studies with specific dollar amounts.</p>
+            <p><strong>Root Cause:</strong> The money is in days 3-7 post-webinar, and you're barely touching it. Most conversions happen from urgency escalation, not from soft replay reminders.</p>
+            <p><strong>Opportunity:</strong> A proper 7-day sequence with escalating urgency = +$50K-100K per quarter in recovered revenue.</p>
+        </div>
+
+        <div class="crisis-box">
+            <h3>CRISIS #3: Positioning is Too Broad</h3>
+            <p>Your messaging targets "high achievers" and "service providers, coaches, consultants stuck at $100K-$1M." But your audience data shows 58% earn $0-$30K. There's a mismatch between who you're attracting and who you want to attract.</p>
+            <p><strong>Root Cause:</strong> Unclear avatar = unqualified leads = low close rate. Your highest-value buyers (plateau professionals earning $100K+) are only 20% of registrants.</p>
+            <p><strong>Opportunity:</strong> Tightening positioning to "business owners hitting invisible income ceilings" filters for buyers who can afford $6K and have immediate ROI urgency.</p>
+        </div>
+
+        <div class="strength-box">
+            <h3>YOUR STRENGTHS (What's Already Working)</h3>
+            <ul class="check-list">
+                <li><strong>CPL is excellent</strong> - $14.85 average is well below the $15-25 benchmark for free webinars</li>
+                <li><strong>Show-up rate is solid</strong> - 25% is acceptable; with WhatsApp backup could hit 35%+</li>
+                <li><strong>High perceived value</strong> - "Millionaire Hypnotist" positioning creates authority</li>
+                <li><strong>Thank you page has video + survey</strong> - Qualification question is good for VIP identification</li>
+                <li><strong>Revenue per sale is high</strong> - $5,997-$6,997 means each additional close = massive ROI</li>
+                <li><strong>Strong testimonials exist</strong> - Just need to format them with specific dollar outcomes</li>
+                <li><strong>Organic reach is strong</strong> - You're getting 17-110 organic registrants per webinar</li>
+            </ul>
+        </div>
+
+        <h3>KEY METRICS COMPARISON</h3>
+        <table class="benchmark-table">
+            <thead>
+                <tr>
+                    <th>Metric</th>
+                    <th>Your Current</th>
+                    <th>Industry Benchmark</th>
+                    <th>Target</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Cost Per Lead (CPL)</td>
+                    <td>$14.85</td>
+                    <td>$15-25</td>
+                    <td>$12-15</td>
+                    <td class="status-good">EXCELLENT</td>
+                </tr>
+                <tr>
+                    <td>Show-Up Rate</td>
+                    <td>25.4%</td>
+                    <td>30-40%</td>
+                    <td>35%</td>
+                    <td class="status-warning">IMPROVE</td>
+                </tr>
+                <tr>
+                    <td>Attendee → Booked Call</td>
+                    <td>7.2%</td>
+                    <td>15-25%</td>
+                    <td>18%</td>
+                    <td class="status-crisis">CRISIS</td>
+                </tr>
+                <tr>
+                    <td>Booked → Qualified</td>
+                    <td>50%</td>
+                    <td>70-80%</td>
+                    <td>75%</td>
+                    <td class="status-crisis">CRISIS</td>
+                </tr>
+                <tr>
+                    <td>Call Show-Up Rate</td>
+                    <td>75%</td>
+                    <td>80-90%</td>
+                    <td>85%</td>
+                    <td class="status-warning">IMPROVE</td>
+                </tr>
+                <tr>
+                    <td>Close Rate</td>
+                    <td>15%</td>
+                    <td>20-30%</td>
+                    <td>25%</td>
+                    <td class="status-warning">IMPROVE</td>
+                </tr>
+                <tr>
+                    <td>Revenue Per Webinar</td>
+                    <td>$4,320</td>
+                    <td>$15,000+</td>
+                    <td>$17,400</td>
+                    <td class="status-crisis">CRISIS</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="roi-table">
+            <div class="roi-row">
+                <span>Current Annual Revenue (52 webinars × $4,320)</span>
+                <span>$224,640</span>
+            </div>
+            <div class="roi-row">
+                <span>Optimized Revenue Per Webinar</span>
+                <span>$21,460</span>
+            </div>
+            <div class="roi-row">
+                <span>Optimized Annual Revenue (52 × $21,460)</span>
+                <span class="roi-value">$1,115,920</span>
+            </div>
+            <div class="roi-row roi-highlight">
+                <span>TOTAL ANNUAL OPPORTUNITY</span>
+                <span>+$891,280 (397% Growth)</span>
+            </div>
+        </div>
+
+        <div class="key-insight">
+            <h4>THE MULTIPLIER EFFECT</h4>
+            <p>You don't need more traffic. You need to convert the traffic you already have. Fixing your call booking rate from 7% → 18% AND adding a proper post-webinar sequence creates a 4X revenue multiplier with the SAME ad spend.</p>
+        </div>
+    </div>
+</section>
+
+<section id="tiktok-ads" class="section section-red">
+    <div class="container">
+        <h2>TIKTOK ADS OPTIMIZATION</h2>
+
+        <div class="roi-table">
+            <div class="roi-row">
+                <span>Current CTR:</span>
+                <span>0.7%</span>
+            </div>
+            <div class="roi-row">
+                <span>Target CTR:</span>
+                <span>1.5-2%+</span>
+            </div>
+            <div class="roi-row">
+                <span>Current CPL:</span>
+                <span>$14.85 (decent)</span>
+            </div>
+            <div class="roi-row">
+                <span>Opportunity:</span>
+                <span class="roi-value">2X More Registrants (Same Spend)</span>
+            </div>
+        </div>
+
+        <div class="key-insight" style="background: rgba(0,0,0,0.3);">
+            <h4>THE AD PROBLEM</h4>
+            <p>Your ads are too broad. You're speaking to "business owners, coaches, and consultants" — three different audiences with different pain points. The ads need to be SPECIFIC. One ad for entrepreneurs. One ad for high-performers. Targeted messaging = higher CTR = lower CPL = better ROAS.</p>
+        </div>
+
+        <div class="recommendations">
+
+            <div class="rec-card">
+                <span class="rec-number">1</span>
+                <h3 class="rec-title">CURRENT AD ANALYSIS</h3>
+                <div class="rec-content">
+                    <p>Based on review of your "Reflection" ad:</p>
+
+                    <div class="code-example">CURRENT HOOK:
+"Let's think for a moment. This is a question for my business owners,
+coaches and consultants who are six years into their businesses."
+
+PROBLEMS:
+
+❌ "Let's think for a moment" — Weak hook, doesn't stop the scroll
+❌ "Business owners, coaches and consultants" — 3 different audiences
+❌ "Six years into their businesses" — Oddly specific, people don't identify this way
+❌ No pattern interrupt — Nothing surprising or curiosity-inducing
+❌ No clear pain statement — Doesn't agitate a specific problem
+
+CURRENT CTA:
+"Click the link below and subscribe to my live hypnosis event"
+
+❌ "Subscribe" — Wrong word (sounds like newsletter)
+❌ "Seating is limited" — Vague scarcity, how limited?
+
+MIDDLE SECTION:
+"I've helped over 2,500 entrepreneurs build 300, I don't know, like 33,000 followers"
+
+❌ Confusing — What does 300 or 33,000 mean?
+❌ TikTok followers ≠ income — Not compelling for business owners
+❌ Stumbling ("I don't know, like") — Kills credibility</div>
+
+                    <table class="benchmark-table">
+                        <thead>
+                            <tr>
+                                <th>Element</th>
+                                <th>Score</th>
+                                <th>Issue</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Hook</td>
+                                <td>3/10</td>
+                                <td>Doesn't stop scroll</td>
+                            </tr>
+                            <tr>
+                                <td>Targeting</td>
+                                <td>4/10</td>
+                                <td>Too broad — 3 audiences</td>
+                            </tr>
+                            <tr>
+                                <td>Pain/Problem</td>
+                                <td>2/10</td>
+                                <td>Barely touched</td>
+                            </tr>
+                            <tr>
+                                <td>Credibility</td>
+                                <td>5/10</td>
+                                <td>Good numbers, fumbled delivery</td>
+                            </tr>
+                            <tr>
+                                <td>CTA</td>
+                                <td>4/10</td>
+                                <td>"Subscribe" is wrong word</td>
+                            </tr>
+                            <tr>
+                                <td>Funnel Alignment</td>
+                                <td>3/10</td>
+                                <td>Doesn't match "income ceiling" positioning</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="impact-badge">ADS NEED COMPLETE OVERHAUL</div>
+                </div>
+            </div>
+
+            <div class="rec-card">
+                <span class="rec-number">2</span>
+                <h3 class="rec-title">THE FIX: TARGETED AD SETS</h3>
+                <div class="rec-content">
+                    <p>Instead of one broad ad, create SPECIFIC ads for each audience segment:</p>
+
+                    <div class="code-example">AD SET STRUCTURE:
+
+AD SET 1: ENTREPRENEURS ($50K-$250K/year)
+→ Pain: Hit an income ceiling, can't break through
+→ Hook: About income/revenue specifically
+→ Message: "Your subconscious has a thermostat for how much you can earn"
+
+AD SET 2: HIGH-TICKET SERVICE PROVIDERS
+→ Pain: Scared to raise prices, undercharging
+→ Hook: About pricing/worth
+→ Message: "You're leaving money on the table because of a belief installed in childhood"
+
+AD SET 3: COACHES (Use as social proof, not primary target)
+→ Only run this if you have extra budget
+→ Coaches have less money, longer sales cycles
+→ Better as testimonials than as target audience
+
+WHY THIS WORKS:
+→ Specific pain = higher resonance
+→ Higher resonance = more clicks
+→ More clicks = lower CPL
+→ Lower CPL = better ROAS</div>
+
+                    <div class="impact-badge">SEGMENT YOUR ADS</div>
+                </div>
+            </div>
+
+            <div class="rec-card">
+                <span class="rec-number">3</span>
+                <h3 class="rec-title">HIGH-CONVERTING HOOK FORMULAS</h3>
+                <div class="rec-content">
+                    <p>The hook (first 3 seconds) determines if they watch or scroll. Use these patterns:</p>
+
+                    <div class="code-example">HOOK FORMULA 1: THE PATTERN INTERRUPT
+"Stop. If you're an entrepreneur stuck between $10K-$30K months, this is for you."
+→ "Stop" interrupts the scroll
+→ Specific income range = they self-identify
+
+HOOK FORMULA 2: THE CONTROVERSIAL STATEMENT
+"The reason you can't break $20K months has nothing to do with your strategy."
+→ Creates curiosity — "Wait, what is it then?"
+→ Challenges their assumption
+
+HOOK FORMULA 3: THE DIRECT CALL-OUT
+"Entrepreneurs making $100K-$300K per year — you have a subconscious income ceiling."
+→ Names the audience directly
+→ Names the problem directly
+
+HOOK FORMULA 4: THE PROOF HOOK
+"I helped an entrepreneur go from $8K to $30K months in 6 weeks. Here's what we did."
+→ Leads with result
+→ Creates curiosity about HOW
+
+HOOK FORMULA 5: THE "IF YOU" HOOK
+"If you're working harder than ever but your income won't budge — it's not your strategy. It's your subconscious."
+→ Describes their situation
+→ Offers new explanation
+
+---
+
+HOOKS TO AVOID:
+❌ "Let's think for a moment..." — Boring, no interrupt
+❌ "Hey guys, so I wanted to talk about..." — Generic, skippable
+❌ "This is for business owners, coaches, consultants..." — Too broad
+❌ "Have you ever felt like..." — Overused, doesn't land</div>
+
+                    <div class="impact-badge">HOOK = 80% OF AD SUCCESS</div>
+                </div>
+            </div>
+
+            <div class="rec-card">
+                <span class="rec-number">4</span>
+                <h3 class="rec-title">TIKTOK AD SCRIPT TEMPLATE</h3>
+                <div class="rec-content">
+                    <p>Use this structure for all webinar funnel ads:</p>
+
+                    <div class="code-example">TIKTOK AD STRUCTURE (30-45 seconds)
+
+============================================================
+HOOK (0-3 seconds) — Stop the scroll
+============================================================
+"Entrepreneurs making $100K-$300K — you have an income ceiling
+and you don't even know it."
+
+============================================================
+PROBLEM (3-10 seconds) — Agitate the pain
+============================================================
+"You've done everything right. Strategy, marketing, sales.
+But no matter how hard you push, you keep hitting the same wall.
+
+That's not a strategy problem. That's a subconscious block."
+
+============================================================
+SOLUTION (10-20 seconds) — Introduce the answer
+============================================================
+"Your brain has a thermostat for how much money you're 'allowed' to make.
+It was set in childhood. And until you reset it, you'll keep hitting the same ceiling.
+
+I'm Julia Hankins. I'm a business hypnotist. I've helped over 2,000 entrepreneurs
+break through their income ceilings — some adding $10K-$50K/month after just one session."
+
+============================================================
+CTA (20-30 seconds) — Tell them exactly what to do
+============================================================
+"I'm hosting a free live hypnosis session where I'll help you
+identify and start dissolving your income ceiling block — live.
+
+Click the link. Register now. Spots are limited to 100 people.
+
+If you're ready to finally break through, I'll see you there."
+
+---
+
+KEY ELEMENTS:
+✅ Specific audience in hook (entrepreneurs, income range)
+✅ Pain agitation (hitting the same wall)
+✅ New explanation (subconscious thermostat)
+✅ Credibility (2,000 entrepreneurs, specific results)
+✅ Clear CTA (click, register, limited spots)
+✅ Aligned with funnel positioning (income ceiling)</div>
+
+                    <div class="impact-badge">USE THIS TEMPLATE</div>
+                </div>
+            </div>
+
+            <div class="rec-card">
+                <span class="rec-number">5</span>
+                <h3 class="rec-title">AD CREATIVE BEST PRACTICES</h3>
+                <div class="rec-content">
+
+                    <div class="code-example">VISUAL STYLE:
+→ Selfie-style or talking head (authentic, not polished)
+→ Good lighting, clear audio
+→ Captions ON (80% watch without sound)
+→ No fancy editing — raw performs better on TikTok
+
+ENERGY:
+→ Confident, direct, slightly intense
+→ NOT salesy or over-hyped
+→ Talk TO them, not AT them
+→ Match the energy of someone who genuinely wants to help
+
+LENGTH:
+→ 30-45 seconds ideal for cold traffic
+→ Under 60 seconds for algorithm favor
+→ Front-load the value — hook in first 3 seconds
+
+FILMING TIPS:
+→ Script it out, but don't read
+→ Do 5-10 takes, pick the best energy
+→ Vertical format only (9:16)
+→ Eye contact with camera = connection
+
+TESTING STRATEGY:
+→ Test 3-5 different hooks with same body
+→ Let each run for 3-5 days with $20-50/day
+→ Kill losers, scale winners
+→ Winning hook = scale to $100-500/day</div>
+
+                </div>
+            </div>
+
+            <div class="rec-card">
+                <span class="rec-number">6</span>
+                <h3 class="rec-title">SAMPLE REWRITTEN ADS</h3>
+                <div class="rec-content">
+                    <p>Here are 3 ready-to-film ad scripts aligned with the new positioning:</p>
+
+                    <div class="code-example">AD 1: "THE INCOME CEILING" (For Entrepreneurs)
+
+[HOOK]
+"Entrepreneurs — there's a reason you keep hitting the same income ceiling.
+And it has nothing to do with your marketing."
+
+[BODY]
+"You've got the strategy. You've got the skills.
+But every time you get close to breaking through, something pulls you back.
+
+That's your subconscious. It has a limit on how much you're 'allowed' to earn.
+And until you reprogram it, you'll keep bouncing off that ceiling.
+
+I'm Julia. I'm a business hypnotist.
+I've helped entrepreneurs add $10K, $20K, even $50K to their monthly revenue
+by dissolving these hidden blocks."
+
+[CTA]
+"I'm doing a free live hypnosis session where I'll help you identify YOUR ceiling
+and start dissolving it — live.
+
+Tap the link. Register now. Only 100 spots."
+
+---
+
+AD 2: "THE THERMOSTAT" (For High-Earners)
+
+[HOOK]
+"If you're making $100K-$300K but can't seem to break to the next level — listen."
+
+[BODY]
+"Your brain has a thermostat. It's set to whatever feels 'normal' to you.
+
+If $15K months feel normal, you'll always end up around $15K.
+Even if you have a $30K month, something will happen to bring it back down.
+
+That thermostat was programmed in childhood. By your parents. By your environment.
+And it's been running your financial life ever since."
+
+[CTA]
+"I help entrepreneurs reset their thermostat through hypnosis.
+I'm doing a free live session where I'll show you how.
+
+Link in bio. Spots are limited."
+
+---
+
+AD 3: "THE HARDER YOU WORK" (Pain-Focused)
+
+[HOOK]
+"The harder you work, the more stuck you feel. Sound familiar?"
+
+[BODY]
+"You're doing all the right things.
+Posting content. Running ads. Taking calls.
+But the money isn't matching the effort.
+
+Here's what nobody tells you:
+Hard work doesn't break income ceilings. Subconscious reprogramming does.
+
+Your brain is blocking your success to keep you 'safe.'
+Until you rewire that, you're pushing a car with the parking brake on."
+
+[CTA]
+"I'm hosting a live hypnosis session to help entrepreneurs release these blocks.
+It's free. It's live. And it actually works.
+
+Tap the link to register. I'll see you there."</div>
+
+                    <div class="impact-badge">READY-TO-FILM SCRIPTS</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="landing-page" class="section">
+    <div class="container">
+        <h2>LANDING PAGE OPTIMIZATION</h2>
+
+        <div class="roi-table">
+            <div class="roi-row">
+                <span>Current Conversion Rate:</span>
+                <span>15.06% (1,765 opt-ins / 11,717 uniques)</span>
+            </div>
+            <div class="roi-row">
+                <span>Target Conversion Rate:</span>
+                <span>25-30%</span>
+            </div>
+            <div class="roi-row">
+                <span>Opportunity:</span>
+                <span class="roi-value">+67% More Registrants (Same Traffic)</span>
+            </div>
+        </div>
+
+        <div class="recommendations">
+
+            <div class="rec-card">
+                <span class="rec-number">1</span>
+                <h3 class="rec-title">REFRAME HEADLINE WITH SPECIFIC INCOME OUTCOME</h3>
+                <div class="rec-content">
+                    <p>Your current headline "Get Hypnotized Live — explode past your 6-7 figure income ceiling without burning out" is good but lacks specificity. Add a concrete outcome.</p>
+
+                    <div class="before-after">
+                        <div class="before-box">
+                            <h4>Before</h4>
+                            <p>"Get Hypnotized Live — explode past your 6-7 figure income ceiling without burning out in 2026"</p>
+                        </div>
+                        <div class="after-box">
+                            <h4>After</h4>
+                            <p>"How Entrepreneurs Are Breaking Through Their $10K-$30K/Month Ceiling Using Subconscious Reprogramming (Live Hypnosis Experience)"</p>
+                        </div>
+                    </div>
+
+                    <div class="code-example">ALTERNATIVE HEADLINES:
+
+→ "The Hypnosis Session That's Helped 1,500+ Entrepreneurs Break Past Their Income Ceiling (Experience It Live)"
+
+→ "Why You Keep Hitting the Same Income Ceiling — And How to Dissolve It in 60 Minutes (Live Hypnosis)"
+
+→ "LIVE: The Subconscious Block Keeping You Stuck at $10K-$20K Months (And How to Release It Today)"</div>
+
+                    <div class="impact-badge">+15-25% CONVERSION LIFT</div>
+                </div>
+            </div>
+
+            <div class="rec-card">
+                <span class="rec-number">2</span>
+                <h3 class="rec-title">ADD THE ATTENDEE-ONLY BONUS</h3>
+                <div class="rec-content">
+                    <p>You're missing a key conversion trigger: a bonus that creates loss aversion. This bonus is DIAGNOSTIC — it helps them identify their block but doesn't solve it.</p>
+
+                    <div class="code-example">ATTENDEE BONUS:
+
+"🎧 FREE BONUS: The Block Recognition Audio ($197 Value)
+
+→ 15-minute guided self-reflection to identify YOUR specific subconscious block
+→ Discover exactly what's been keeping you stuck at your income ceiling
+→ Leave knowing: 'My block is [X]' — clarity you've never had before
+
+⚠️ This audio is ONLY available to live attendees. No show = no bonus."</div>
+
+                    <ul class="check-list">
+                        <li>Creates loss aversion (miss the webinar = lose the bonus)</li>
+                        <li>DIAGNOSTIC only — identifies the block, doesn't remove it</li>
+                        <li>Opens the gap: They know what's wrong but need Julia to fix it</li>
+                        <li>Primes them for the sale: Named problems demand solutions</li>
+                    </ul>
+
+                    <div class="impact-badge">+40-60% SHOW-UP RATE IMPROVEMENT</div>
+                </div>
+            </div>
+
+            <div class="rec-card">
+                <span class="rec-number">3</span>
+                <h3 class="rec-title">TRANSFORM TESTIMONIALS WITH DOLLAR OUTCOMES</h3>
+                <div class="rec-content">
+                    <p>Your current testimonials are emotional ("I feel amazing", "This was crazy") but lack the specific dollar outcomes that drive conversions for high-ticket offers.</p>
+
+                    <div class="before-after">
+                        <div class="before-box">
+                            <h4>Before</h4>
+                            <p>"I feel more confident. A mindset shift." — DP</p>
+                            <p>"This was the missing piece." — PC</p>
+                        </div>
+                        <div class="after-box">
+                            <h4>After</h4>
+                            <p>"Went from $0 to $10K/month in 30 days after just one session" — Mark, Business Owner</p>
+                            <p>"Hit $20K profit after 8 months of struggle — Kim broke through in weeks" — Kim, Entrepreneur</p>
+                        </div>
+                    </div>
+
+                    <p>Your emails mention these specific results (Mark: $0 → $10K, Kim: $20K profit, CJ: best sales month in 2 years). Put these ON THE LANDING PAGE with full names and photos.</p>
+
+                    <div class="impact-badge">+10-15% CONVERSION LIFT</div>
+                </div>
+            </div>
+
+            <div class="rec-card">
+                <span class="rec-number">4</span>
+                <h3 class="rec-title">ADD "WHO'S IN THE ROOM" SECTION</h3>
+                <div class="rec-content">
+                    <p>High-achievers want to know who else is attending. Create peer validation by showing the caliber of your audience.</p>
+
+                    <div class="code-example">WHO'S IN THE ROOM:
+
+→ 56% Business Owners & Entrepreneurs
+→ 24% Sales Professionals & Consultants
+→ 12% Coaches & Service Providers
+→ 8% Corporate Executives
+
+Industries Represented: Finance, Real Estate, Coaching, Tech, Healthcare, E-commerce
+
+Average Participant: $50K-$250K earner ready to break through to the next level</div>
+
+                    <p>This positions your webinar as exclusive and attracts the RIGHT audience while filtering out tire-kickers.</p>
+
+                    <div class="impact-badge">ATTRACTS QUALIFIED BUYERS</div>
+                </div>
+            </div>
+
+            <div class="rec-card">
+                <span class="rec-number">5</span>
+                <h3 class="rec-title">STRENGTHEN THE CTA WITH VALUE + URGENCY</h3>
+                <div class="rec-content">
+                    <p>Your current CTAs ("Save Spot", "Fast-Track Your Breakthrough Now") are decent but can be stronger.</p>
+
+                    <div class="before-after">
+                        <div class="before-box">
+                            <h4>Before</h4>
+                            <p>"Save Your Spot"</p>
+                            <p>"Fast-Track Your Breakthrough Now — Register Here"</p>
+                        </div>
+                        <div class="after-box">
+                            <h4>After</h4>
+                            <p>"✓ YES — Save My Spot & Get the Block Recognition Audio FREE"</p>
+                            <p>"✓ Claim My Spot (Only 100 Live Seats Available)"</p>
+                        </div>
+                    </div>
+
+                    <ul class="check-list">
+                        <li>Gold button pops beautifully against your dark purple — keep that</li>
+                        <li>Add bonus to CTA to increase perceived value</li>
+                        <li>Add real scarcity (100 seats) if you can enforce it</li>
+                    </ul>
+
+                    <div class="impact-badge">+5-10% CTA CLICK-THROUGH</div>
+                </div>
+            </div>
+
+            <div class="rec-card">
+                <span class="rec-number">6</span>
+                <h3 class="rec-title">TIGHTEN AUDIENCE TARGETING IN COPY</h3>
+                <div class="rec-content">
+                    <p>Your top bar says "Attn: service providers, coaches and consultants stuck at $100,000 to 1 million a year" — but 58% of your actual registrants earn $0-$30K. This creates a mismatch.</p>
+
+                    <p><strong>Decision Point:</strong> Either...</p>
+
+                    <div class="code-example">OPTION A: Target business owners hitting income ceilings (premium positioning)
+
+"For 6-Figure Business Owners Who Keep Hitting the Same Income Ceiling"
+→ Attracts buyers who can afford $6K
+→ Filters out struggling entrepreneurs
+→ Higher close rate, higher LTV
+
+OPTION B: Target ambitious entrepreneurs ready to level up (volume positioning)
+
+"For Ambitious Entrepreneurs Ready to Break Past Self-Sabotage"
+→ Wider net, more registrants
+→ Lower qualification rate
+→ Need lower price point or downsell</div>
+
+                    <p><strong>My Recommendation:</strong> Option A. Your $5,800 price point requires buyers with existing income. Focus on "plateau professionals" — people earning $50K-$250K who KNOW they should be further ahead.</p>
+
+                    <div class="impact-badge">FILTERS FOR QUALIFIED BUYERS</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="thank-you" class="section">
+    <div class="container">
+        <h2>THANK YOU PAGE OPTIMIZATION</h2>
+
+        <div class="roi-table">
+            <div class="roi-row">
+                <span>Current Show-Up Rate:</span>
+                <span>25.4%</span>
+            </div>
+            <div class="roi-row">
+                <span>Target Show-Up Rate:</span>
+                <span>35-40%</span>
+            </div>
+            <div class="roi-row">
+                <span>Opportunity:</span>
+                <span class="roi-value">+38% More Live Attendees</span>
+            </div>
+        </div>
+
+        <p>Your thank you page is good — you have a video, a qualification question, and calendar integration. But there are key elements missing that could dramatically increase show-up rates.</p>
+
+        <div class="recommendations">
+
+            <div class="rec-card">
+                <span class="rec-number">1</span>
+                <h3 class="rec-title">DELIVER BONUS IMMEDIATELY (78% RULE)</h3>
+                <div class="rec-content">
+                    <p>The #1 predictor of webinar conversion is pre-webinar content consumption. When registrants engage with content BEFORE the webinar, show-up and close rates skyrocket.</p>
+
+                    <div class="code-example">IMPLEMENTATION:
+
+1. Mention the "Block Recognition Audio" bonus they'll receive for attending LIVE
+
+2. Track who downloads (VIP identifier)
+
+3. Build anticipation: "The Block Recognition Audio you'll receive after the session will reveal exactly what's been holding you back..."
+
+4. Segment VIPs for personal outreach</div>
+
+                    <table class="benchmark-table">
+                        <thead>
+                            <tr>
+                                <th>Pre-Event Engagement</th>
+                                <th>Expected Show-Up</th>
+                                <th>Expected Conversion</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>No pre-consumption</td>
+                                <td>15-20%</td>
+                                <td>2-5%</td>
+                            </tr>
+                            <tr>
+                                <td>Partial consumption</td>
+                                <td>25-35%</td>
+                                <td>8-12%</td>
+                            </tr>
+                            <tr>
+                                <td>78%+ consumption</td>
+                                <td>40-50%</td>
+                                <td>15-25%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="impact-badge">+38% SHOW-UP RATE</div>
+                </div>
+            </div>
+
+            <div class="rec-card">
+                <span class="rec-number">2</span>
+                <h3 class="rec-title">ADD SMS/WHATSAPP OPT-IN</h3>
+                <div class="rec-content">
+                    <p>Email deliverability is never 100%. You need a backup channel. WhatsApp/SMS reminders can boost show-up rates by 30-50%.</p>
+
+                    <div class="code-example">ADD TO THANK YOU PAGE:
+
+📱 "Want a personal reminder before we go live?
+    Text 'HYPNOTIZE' to [number] for VIP reminders."
+
+OR
+
+📱 "Join the VIP WhatsApp Reminder List
+    → Get a personal ping 30 minutes before we start
+    → Only for committed attendees"</div>
+
+                    <table class="benchmark-table">
+                        <thead>
+                            <tr>
+                                <th>Reminder Channel</th>
+                                <th>Expected Show-Up</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Email only</td>
+                                <td>20-25%</td>
+                            </tr>
+                            <tr>
+                                <td>Email + Automated WhatsApp</td>
+                                <td>30-35%</td>
+                            </tr>
+                            <tr>
+                                <td>Email + WhatsApp + VIP Personal Text</td>
+                                <td>40-50%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="impact-badge">+30-50% SHOW-UP BOOST</div>
+                </div>
+            </div>
+
+            <div class="rec-card">
+                <span class="rec-number">3</span>
+                <h3 class="rec-title">ADD SECOND QUALIFICATION QUESTION</h3>
+                <div class="rec-content">
+                    <p>You're asking "What's your biggest challenge?" — great. Add a second question to identify VIPs for personal follow-up:</p>
+
+                    <div class="code-example">QUALIFICATION QUESTIONS:
+
+Q1: What is the biggest challenge or obstacle you are facing in your business or personal life? ✓ (You have this)
+
+Q2: "What's your current monthly income from your business?"
+    □ Under $5K/month
+    □ $5K-$10K/month
+    □ $10K-$30K/month
+    □ $30K-$50K/month
+    □ $50K+/month
+
+Q3: "How committed are you to breaking through your income ceiling in the next 90 days?"
+    □ Just exploring
+    □ Somewhat committed
+    □ Very committed — ready to invest in myself</div>
+
+                    <p><strong>VIP Criteria:</strong> Anyone who answers "$10K+/month" AND "Very committed" gets flagged for personal outreach before the webinar.</p>
+
+                    <div class="impact-badge">IDENTIFIES HIGH-VALUE PROSPECTS</div>
+                </div>
+            </div>
+
+            <div class="rec-card">
+                <span class="rec-number">4</span>
+                <h3 class="rec-title">ADD SOCIAL PROOF COUNTDOWN</h3>
+                <div class="rec-content">
+                    <p>Show real-time registrations to create FOMO and validate their decision to register.</p>
+
+                    <div class="code-example">ADD TO THANK YOU PAGE:
+
+🔥 "You're joining [1,247] other entrepreneurs who have registered for this session"
+
+OR
+
+"347 spots filled in the last 24 hours — this is going to be powerful"</div>
+
+                    <div class="impact-badge">BUILDS ANTICIPATION</div>
+                </div>
+            </div>
+
+            <div class="rec-card">
+                <span class="rec-number">5</span>
+                <h3 class="rec-title">MAKE CALENDAR BUTTON MORE PROMINENT</h3>
+                <div class="rec-content">
+                    <p>Your calendar button exists but is buried. Make it unmissable:</p>
+
+                    <div class="before-after">
+                        <div class="before-box">
+                            <h4>Before</h4>
+                            <p>🗓 "Add Masterclass to Your Calendar" (gold button at bottom)</p>
+                        </div>
+                        <div class="after-box">
+                            <h4>After</h4>
+                            <p>⚠️ "CRITICAL: Add to Calendar NOW (Most People Who Skip This Step Miss the Session)"</p>
+                            <p>[BIG GOLD BUTTON: Add to Google Calendar]</p>
+                            <p>[Add to Apple Calendar] [Add to Outlook]</p>
+                        </div>
+                    </div>
+
+                    <div class="impact-badge">+20% CALENDAR ADDS</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="vip-upsell" class="section">
+    <div class="container">
+        <h2>BONUS STRUCTURE + VIP UPSELL</h2>
+
+        <div class="roi-table">
+            <div class="roi-row">
+                <span>VIP Upsell Revenue Potential:</span>
+                <span class="roi-value">$297/person × 3-5% conversion = $890-$1,485/webinar</span>
+            </div>
+        </div>
+
+        <p>Two distinct offers that work together: The ATTENDEE BONUS creates show-up incentive and opens the gap (diagnostic). The VIP UPSELL identifies your hottest buyers and gives them a taste of personalized work.</p>
+
+        <div class="key-insight">
+            <h4>THE TWO-TIER BONUS STRUCTURE</h4>
+            <p><strong>ATTENDEE BONUS (Free):</strong> "The Block Recognition Audio" — Helps them IDENTIFY their block. Diagnostic only. Creates the gap.<br><br>
+            <strong>VIP UPSELL ($297):</strong> "The Personalized Breakthrough Bundle" — Lifetime replay + Custom daily reset audio with their name + Julia's voice note. Retention-focused. Identifies serious buyers who are 3-4X more likely to buy MDM.</p>
+        </div>
+
+        <div class="recommendations">
+
+            <div class="rec-card">
+                <span class="rec-number">1</span>
+                <h3 class="rec-title">ATTENDEE BONUS: THE BLOCK RECOGNITION AUDIO (FREE)</h3>
+                <div class="rec-content">
+                    <p><strong>Delivered to:</strong> Live attendees only (creates show-up incentive)</p>
+
+                    <div class="code-example">"THE BLOCK RECOGNITION AUDIO" — $197 Value (FREE for Live Attendees)
+
+WHAT IT IS:
+→ 15-minute guided self-reflection audio
+→ Julia walks them through questions to IDENTIFY their PRIMARY block
+→ NOT hypnosis, NOT a regression — just guided discovery
+→ By the end, they'll know: "My block is [X]"
+
+WHAT IT DOES:
+→ DIAGNOSTIC ONLY — identifies the block, doesn't remove it
+→ Creates the "aha" moment: "So THAT'S what's been stopping me"
+→ Opens the gap: Now they know what's wrong but can't fix it alone
+→ Primes them to want the solution (MDM)
+
+DELIVERY:
+→ Emailed to live attendees within 1 hour of webinar ending
+→ "As promised, here's your Block Recognition Audio. Find a quiet space,
+   press play, and discover exactly what's been holding you back."
+
+WHY THIS WORKS:
+→ They now have a NAMED enemy (their specific block)
+→ Named problems demand solutions
+→ They'll be thinking: "Julia identified it... Julia can remove it"</div>
+
+                    <div class="impact-badge">INCREASES SHOW-UP + PRIMES BUYERS</div>
+                </div>
+            </div>
+
+            <div class="rec-card">
+                <span class="rec-number">2</span>
+                <h3 class="rec-title">VIP UPSELL: THE PERSONALIZED BREAKTHROUGH BUNDLE — $297</h3>
+                <div class="rec-content">
+                    <p><strong>Presented:</strong> On a separate upsell page AFTER registration (not on thank you page).</p>
+
+                    <div class="code-example">"THE PERSONALIZED BREAKTHROUGH BUNDLE" — $297
+
+"You're registered. But some entrepreneurs want MORE than just the live session..."
+
+WHAT'S INCLUDED:
+
+1. LIFETIME WEBINAR REPLAY ACCESS (Value: $297)
+   → Regular attendees get 48 hours
+   → VIPs get PERMANENT access
+   → "Re-experience the hypnosis whenever you need a reset"
+
+2. YOUR CUSTOM "DAILY RESET" AUDIO (Value: $597)
+   → A 10-minute audio personalized with YOUR NAME and YOUR specific block type
+   → Designed for daily listening — morning routine integration
+   → Reinforces the webinar breakthrough and keeps you elevated
+   → "This is YOUR audio. No one else has it."
+
+3. JULIA'S PERSONAL VOICE NOTE CHECK-IN (Value: $197)
+   → 48 hours after the webinar, Julia sends you a personal 2-min voice note
+   → "Hey [Name], I saw you at the session. How are you feeling? What shifted?"
+   → Direct, personal attention from Julia
+
+TOTAL VALUE: $991
+YOUR INVESTMENT: $297
+
+⚠️ Limited to 20 VIP spots per webinar
+(Julia personally creates each custom audio)</div>
+
+                    <p><strong>Why this works:</strong></p>
+                    <ul class="check-list">
+                        <li><strong>Buyer behavior predicts buyer behavior</strong> — VIPs are 3-4X more likely to buy MDM</li>
+                        <li><strong>Custom audio creates desire for MORE</strong> — "If one audio did this, what would 12 weeks do?"</li>
+                        <li><strong>It's maintenance, not transformation</strong> — Keeps them elevated but doesn't do the deep work</li>
+                        <li><strong>Personal touch at scale</strong> — Julia records 4-5 base templates, personalizes with names</li>
+                    </ul>
+
+                    <div class="impact-badge">$890-$1,485 ADDITIONAL REVENUE/WEBINAR</div>
+                </div>
+            </div>
+
+            <div class="rec-card">
+                <span class="rec-number">3</span>
+                <h3 class="rec-title">HOW JULIA CREATES CUSTOM AUDIOS (SCALABLE)</h3>
+                <div class="rec-content">
+
+                    <div class="code-example">PRODUCTION METHOD (One-Time Setup + Quick Personalization):
+
+STEP 1: CREATE 4-5 BASE TEMPLATES (one-time work)
+→ Money Block Daily Reset (10 min)
+→ Visibility Block Daily Reset (10 min)
+→ Success Sabotage Daily Reset (10 min)
+→ Confidence Block Daily Reset (10 min)
+→ Scarcity Mindset Daily Reset (10 min)
+
+STEP 2: TEMPLATE STRUCTURE
+→ 0:00-1:00: "Good morning [NAME]... take a deep breath..."
+→ 1:00-8:00: Block-specific reinforcement and affirmations
+→ 8:00-10:00: "Remember [NAME], you are capable of..."
+
+STEP 3: PERSONALIZATION PROCESS (5 min per VIP)
+→ VIP purchases and answers: "What's your biggest block?"
+→ Match them to the right template
+→ Record their name insert (30 seconds of recording)
+→ Splice name into base template (simple audio editing)
+→ Deliver via email within 48 hours of webinar
+
+ALTERNATIVE: AI VOICE CLONE
+→ Record base templates once with Julia's voice
+→ Use AI to insert personalized names throughout
+→ Scales infinitely with zero additional recording time
+→ Tools: ElevenLabs, Play.ht, or similar</div>
+
+                </div>
+            </div>
+
+            <div class="rec-card">
+                <span class="rec-number">4</span>
+                <h3 class="rec-title">VIP UPSELL PAGE STRUCTURE</h3>
+                <div class="rec-content">
+                    <p>Standalone page shown AFTER registration confirmation.</p>
+
+                    <div class="code-example">PAGE FLOW:
+
+1. HEADLINE:
+   "Wait — Want Your Own Personalized Breakthrough Audio?"
+
+2. SUBHEADLINE:
+   "You're registered for the live session. But imagine having an audio
+   made just for YOU — with your name, your block, your breakthrough."
+
+3. VIDEO (60-90 seconds):
+   Julia on camera: "Most people attend the webinar and the breakthrough fades
+   within a week. VIPs get a custom audio they can use EVERY DAY to keep that
+   breakthrough alive. Let me show you what's included..."
+
+4. THE STACK:
+   → Lifetime replay access (Value: $297)
+   → Custom Daily Reset Audio with YOUR name (Value: $597)
+   → Julia's personal voice note check-in (Value: $197)
+   → Total Value: $991 → YOUR PRICE: $297
+
+5. SCARCITY:
+   "Limited to 20 VIP spots — Julia personally creates each audio"
+
+6. CTA BUTTON:
+   "YES — Create My Custom Audio ($297)"
+
+7. DECLINE LINK:
+   "No thanks, I'll just attend the regular session →"
+   (Takes them to thank you page)</div>
+
+                    <div class="impact-badge">IDENTIFIES YOUR HOTTEST BUYERS</div>
+                </div>
+            </div>
+
+            <div class="rec-card">
+                <span class="rec-number">5</span>
+                <h3 class="rec-title">VIP DELIVERY TIMELINE</h3>
+                <div class="rec-content">
+
+                    <div class="code-example">AFTER VIP PURCHASE:
+
+1. IMMEDIATE: Confirmation email
+   "You're in! Your custom audio will be delivered within 48 hours of the webinar."
+
+2. BEFORE WEBINAR: Nothing extra needed
+   VIPs attend the same webinar as everyone else
+
+3. WITHIN 48 HOURS AFTER WEBINAR:
+   → Deliver their custom Daily Reset Audio via email
+   → Include: "Listen to this every morning for the next 7 days"
+
+4. 48 HOURS AFTER WEBINAR:
+   → Julia sends personal voice note via email or WhatsApp
+   → "Hey [Name], I created your custom audio — how are you feeling after Tuesday?"
+
+5. POST-WEBINAR FOLLOW-UP:
+   → VIPs get flagged in CRM as HOT leads
+   → Prioritize them for enrollment calls
+   → Expected close rate: 40-50% (vs 15% for non-VIPs)</div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="crisis-box">
+            <h3>WHY THIS WON'T CANNIBALIZE MDM</h3>
+            <p><strong>The custom audio is MAINTENANCE, not TRANSFORMATION.</strong> It's a daily vitamin, not the surgery. One 10-minute audio cannot replace 12 weeks of deep subconscious reprogramming with live sessions, group support, and direct access to Julia. If anything, experiencing the personalized audio makes them think: "If this one audio helped me this much, imagine what the full program would do." The better the VIP experience, the MORE they want MDM.</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="email-sequence" class="section">
+    <div class="container">
+        <h2>SHOW-UP EMAIL SEQUENCE</h2>
+
+        <p>Your current email timing is solid. Below is a step-by-step breakdown of each email with specific improvements. Follow this as your implementation guide.</p>
+
+        <div class="key-insight">
+            <h4>TWO RULES FOR ALL EMAILS</h4>
+            <p><strong>Rule 1: Use visceral action language.</strong> Replace soft words like "shifting" and "working on" with powerful words like "shatter," "demolish," "obliterate," and "break through." Make them FEEL the breakthrough before it happens.<br><br>
+            <strong>Rule 2: Subject lines = about the live experience.</strong> The bonus is mentioned in the body, not the subject. The subject should make them feel they'll miss something life-changing.</p>
+        </div>
+
+        <div class="recommendations">
+
+            <div class="rec-card">
+                <span class="rec-number">1</span>
+                <h3 class="rec-title">CONFIRMATION EMAIL (Immediately After Registration)</h3>
+                <div class="rec-content">
+                    <p><strong>Purpose:</strong> Lock in commitment, set expectations, create anticipation.</p>
+
+                    <div class="code-example">SUBJECT LINE:
+"You're in — here's how to prepare for your breakthrough"
+
+KEY ELEMENTS TO INCLUDE:
+
+1. SCARCITY CONFIRMATION:
+"You've claimed 1 of 100 spots for this live session."
+
+2. WAITLIST ANGLE:
+"If something comes up and you can't make it, please let us know so we can give your spot to someone on the waitlist."
+
+3. ATTENDEE-ONLY BONUS:
+"When you attend live, you'll receive the Block Recognition Audio — this is ONLY available to live attendees. Miss the session = miss the bonus."
+
+4. CALENDAR CTA:
+"Add this to your calendar right now — most people who skip this step don't show up."
+
+5. P.S. — TESTIMONIAL SCREENSHOTS:
+Include 2-3 screenshots of results-focused testimonials about the transformation (not about your paid program).</div>
+                </div>
+            </div>
+
+            <div class="rec-card">
+                <span class="rec-number">2</span>
+                <h3 class="rec-title">3 DAYS BEFORE EMAIL</h3>
+                <div class="rec-content">
+                    <p><strong>Purpose:</strong> Build anticipation, name the problem, introduce the transformation.</p>
+
+                    <div class="code-example">SUBJECT LINE:
+"In 3 days, we shatter your income ceiling"
+
+KEY ELEMENTS:
+
+1. OPEN WITH THE PROBLEM (visceral language):
+"In 3 days, I'm going to help you demolish the invisible block that's been keeping you stuck at the same income level — no matter how hard you work."
+
+2. AGITATE:
+"You know the pattern: growth, stall, repeat. You hit a ceiling, push through, then slide back. It's exhausting. And it's not your fault — it's your subconscious."
+
+3. TEASE THE SOLUTION:
+"On [DATE], I'm going to show you exactly what's been holding you back — and start dissolving it live."
+
+4. HOMEWORK:
+"Before we meet, write down the income ceiling you keep hitting. Bring it with you. We're going to obliterate it together."
+
+5. P.S. — BONUS REMINDER:
+"Remember: The Block Recognition Audio is only available to live attendees. No replay = no bonus."</div>
+                </div>
+            </div>
+
+            <div class="rec-card">
+                <span class="rec-number">3</span>
+                <h3 class="rec-title">2 DAYS BEFORE EMAIL</h3>
+                <div class="rec-content">
+                    <p><strong>Purpose:</strong> Social proof, build belief that transformation is possible.</p>
+
+                    <div class="code-example">SUBJECT LINE:
+"How Kim went from ready-to-quit to $20K profit in 6 weeks"
+
+KEY ELEMENTS:
+
+1. OPEN WITH STORY:
+"Kim was 8 months into her business and ready to quit. She was working 50+ hours a week and barely breaking even. Sound familiar?"
+
+2. THE TRANSFORMATION:
+"After one hypnosis session with me, something shifted. Within 6 weeks, she hit $20K profit. Her exact words: 'I finally stopped fighting myself.'"
+
+3. CONNECT TO THEM:
+"Kim didn't learn a new strategy. She didn't work harder. She removed the subconscious block that was sabotaging her success. That's what we're doing on [DATE]."
+
+4. CTA:
+"48 hours from now, this could be your story. Don't miss it."
+
+5. P.S. — SCARCITY:
+"Your spot is reserved, but if you can't make it, let us know — we have a waitlist."</div>
+                </div>
+            </div>
+
+            <div class="rec-card">
+                <span class="rec-number">4</span>
+                <h3 class="rec-title">1 DAY BEFORE EMAIL + PREP VIDEO</h3>
+                <div class="rec-content">
+                    <p><strong>Purpose:</strong> Prime their subconscious, maximize tomorrow's breakthrough. This email includes a short video.</p>
+
+                    <div class="code-example">SUBJECT LINE:
+"Do this tonight — your breakthrough starts now"
+
+EMAIL BODY:
+
+"Hey [Name],
+
+Tomorrow I'm hypnotizing you live to break through your income ceiling.
+
+But here's the thing — your breakthrough will be 10X more powerful if you do this ONE exercise tonight.
+
+I recorded a quick 3-minute video to prime your subconscious for what we're about to do together.
+
+[WATCH THE PREP VIDEO]
+
+This isn't optional. The people who do this exercise before the session have dramatically bigger breakthroughs.
+
+Watch it. Do the exercise. Show up tomorrow ready to shatter your ceiling.
+
+See you live,
+Julia
+
+P.S. Tomorrow you'll also receive your Block Recognition Audio — but only if you're there live. No replay."</div>
+
+                    <h4 style="margin-top: 2rem; color: var(--red);">WHAT TO INCLUDE IN THE PREP VIDEO (3-5 minutes):</h4>
+
+                    <div class="code-example">VIDEO STRUCTURE:
+
+0:00-0:30 — INTRO:
+"Hey, it's Julia. Tomorrow I'm going to hypnotize you live to break through your income ceiling. I want you to get the absolute MOST out of this session. So I need you to do this quick exercise with me right now."
+
+0:30-1:00 — SET THE FRAME:
+"Here's the thing — your subconscious is like a door. The more open and relaxed it is when we start tomorrow, the deeper we can go. This exercise cracks that door open tonight, so tomorrow we can blow it wide open."
+
+1:00-3:00 — SIMPLE RELAXATION EXERCISE:
+"Close your eyes. Take a deep breath in... and let it out slowly. Again — breathe in... and release. One more time."
+"Now, as you breathe, I want you to imagine the ceiling you've been hitting. See it above you. Notice how heavy it feels. How long it's been there."
+"Now imagine a small crack forming in that ceiling. Just a hairline fracture. That crack is going to become a breakthrough tomorrow."
+"Take one more breath... and open your eyes."
+
+3:00-3:30 — CLOSE:
+"That's it. You've started the process. Your subconscious is already loosening its grip on that ceiling. Tomorrow, we finish the job. Show up ready. See you live."
+
+PURPOSE OF THIS VIDEO:
+- Gives them a TASTE of hypnosis (not the full thing)
+- Builds anticipation
+- Makes them feel the process has already begun
+- Does NOT solve anything — just opens them up</div>
+                </div>
+            </div>
+
+            <div class="rec-card">
+                <span class="rec-number">5</span>
+                <h3 class="rec-title">4 HOURS BEFORE EMAIL</h3>
+                <div class="rec-content">
+                    <p><strong>Purpose:</strong> Final reminder, urgency, environment prep.</p>
+
+                    <div class="code-example">SUBJECT LINE:
+"4 hours until we break through — are you ready?"
+
+KEY ELEMENTS:
+
+1. URGENCY:
+"In 4 hours, we go live. This is happening."
+
+2. ENVIRONMENT REMINDER:
+"Quick checklist:
+✓ Quiet space — no distractions
+✓ Phone on silent
+✓ Water nearby
+✓ Camera on if possible (helps me connect with your subconscious)"
+
+3. STORY (short):
+"CJ showed up to a session like this burned out and stuck at $8K months. 3 weeks later: his best month in 2 years — $27K with LESS effort. He didn't change his strategy. He changed his subconscious."
+
+4. CTA:
+"Join 10 minutes early to settle in. Link: [LINK]"
+
+5. P.S. — BONUS:
+"This is your last chance to claim the Block Recognition Audio. Live attendees only."</div>
+                </div>
+            </div>
+
+            <div class="rec-card">
+                <span class="rec-number">6</span>
+                <h3 class="rec-title">30 MINUTES BEFORE (SMS)</h3>
+                <div class="rec-content">
+                    <div class="code-example">"We start in 30 mins! The first 15 minutes = biggest breakthroughs. Join now: [LINK] — Julia"</div>
+                </div>
+            </div>
+
+            <div class="rec-card">
+                <span class="rec-number">7</span>
+                <h3 class="rec-title">LIVE NOW (EMAIL + SMS)</h3>
+                <div class="rec-content">
+                    <div class="code-example">EMAIL SUBJECT: "We're LIVE — join now"
+
+EMAIL BODY:
+"[Name], we just started. I'm about to guide the room through a live hypnosis to break through income ceilings. Join now: [LINK]"
+
+SMS:
+"We're live! Join now: [LINK] — Julia"</div>
+                </div>
+            </div>
+
+            <div class="rec-card">
+                <span class="rec-number">8</span>
+                <h3 class="rec-title">25 MINUTES AFTER START (SMS — for no-shows)</h3>
+                <div class="rec-content">
+                    <div class="code-example">"Hey [Name], we're 25 mins in and it's powerful. You're not too late — join now and catch the live hypnosis: [LINK]"</div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="crisis-box">
+            <h3>EMAIL DELIVERABILITY CHECK</h3>
+            <p>If your show-up rate varies wildly (16 attendees one week, 120 the next), you may have a deliverability problem. Before optimizing copy, verify:</p>
+            <ul class="check-list">
+                <li>SPF is configured correctly</li>
+                <li>DKIM is configured correctly</li>
+                <li>DMARC is configured correctly</li>
+                <li>Test emails going to Gmail, Yahoo, Outlook — check spam folders</li>
+                <li>Monitor open rates — if below 20%, you have a problem</li>
+            </ul>
+            <p><strong>Rule:</strong> The best copy in the world is worthless if it goes to spam.</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="webinar" class="section">
+    <div class="container">
+        <h2>WEBINAR CONTENT RESTRUCTURE</h2>
+
+        <div class="roi-table">
+            <div class="roi-row">
+                <span>Current Attendee → Booked Call:</span>
+                <span>7.2%</span>
+            </div>
+            <div class="roi-row">
+                <span>Target Attendee → Booked Call:</span>
+                <span>18-22%</span>
+            </div>
+            <div class="roi-row">
+                <span>Opportunity:</span>
+                <span class="roi-value">2.5X More Sales Calls</span>
+            </div>
+        </div>
+
+        <p>Your webinar delivers real transformation through live hypnosis — that's your superpower. But the structure needs optimization to convert that transformation into booked calls. Below is a complete restructure based on Jason Fladlien's proven webinar framework.</p>
+
+        <div class="crisis-box">
+            <h3>CURRENT PROBLEMS WITH YOUR WEBINAR</h3>
+            <p><strong>1. Audience is scattered:</strong> You say "business owners, high achievers, real estate agents, sales people, creators, investors, inventors" — too many. Pick ONE audience with ONE problem.</p>
+            <p><strong>2. Promise is vague:</strong> "Destroy the income ceiling, holding more wealth, clients and attention" — that's four things. Should be ONE clear outcome.</p>
+            <p><strong>3. Too much teaching about HOW hypnosis works:</strong> You spend 10+ minutes on conscious vs subconscious, critical faculty, iceberg analogy. This is interesting but doesn't move people toward the sale. Teach WHAT, not HOW.</p>
+            <p><strong>4. Case studies lack specificity:</strong> JC made $221K — but what was he making BEFORE? Kim got $20K checks — but where did she START? Before/after numbers are critical.</p>
+            <p><strong>5. Pitch is buried and weak:</strong> "I'm going to open up some places for you to call me" — this is passive and has no urgency.</p>
+        </div>
+
+        <div class="key-insight">
+            <h4>THE FLADLIEN PRINCIPLE</h4>
+            <p><strong>ONE audience. ONE problem. ONE solution. ONE offer.</strong> Everything else is noise that kills conversions. Your webinar should feel like a laser, not a flashlight.</p>
+        </div>
+
+        <h3 style="margin-top: 3rem;">RECOMMENDED WEBINAR STRUCTURE (90 Minutes)</h3>
+
+        <div class="recommendations">
+
+            <div class="rec-card">
+                <span class="rec-number">1</span>
+                <h3 class="rec-title">OPENING HOOK (5 minutes)</h3>
+                <div class="rec-content">
+                    <p><strong>Purpose:</strong> Pattern interrupt, establish authority, make ONE big promise.</p>
+
+                    <div class="code-example">CURRENT (scattered):
+"In the next 90 minutes I'm going to move you to destroy the income ceiling, holding more wealth, clients and attention... some of you are business owners, some of you are high achievers, some of you are career people..."
+
+BETTER (focused):
+"In the next 90 minutes, you're going to discover the exact subconscious block that's been keeping you stuck at your current income level — and I'm going to hypnotize you live to start dissolving it.
+
+This session is specifically for entrepreneurs who are already making money but keep hitting the same ceiling. If that's you, you're in the right place. If you're still figuring out your business model, this isn't for you."
+
+WHY THIS WORKS:
+- ONE audience: Entrepreneurs hitting income ceilings
+- ONE promise: Discover your block + start dissolving it
+- Disqualifies the wrong people immediately</div>
+                </div>
+            </div>
+
+            <div class="rec-card">
+                <span class="rec-number">2</span>
+                <h3 class="rec-title">INTRODUCE THE NEW OPPORTUNITY (10 minutes)</h3>
+                <div class="rec-content">
+                    <p><strong>Purpose:</strong> Position this as a NEW category, not an improvement on what they've tried. This is critical for overcoming "I've tried everything" objections.</p>
+
+                    <div class="code-example">THE NEW OPPORTUNITY FRAME:
+
+"You've probably tried a lot of things to break through your income ceiling:
+- Coaches
+- Courses
+- Strategy programs
+- Mindset work
+- Affirmations
+- Therapy
+
+And here's the thing — those all work on your CONSCIOUS mind. That's only 5% of what controls your decisions.
+
+Today, we're doing something completely different. We're going directly to the 95% — your subconscious mind — and reprogramming it at the source.
+
+This isn't an improvement on what you've tried. This is a completely different category."
+
+KEY PHRASE TO USE:
+"This is not about working HARDER on your mindset. This is about working on a DIFFERENT LEVEL entirely."
+
+WHY THIS WORKS:
+- Validates their past efforts (they weren't wrong to try those things)
+- Explains why those things didn't work fully
+- Positions hypnosis as the missing piece, not another version of the same thing</div>
+                </div>
+            </div>
+
+            <div class="rec-card">
+                <span class="rec-number">3</span>
+                <h3 class="rec-title">THE 3 SECRETS / PILLARS (30 minutes)</h3>
+                <div class="rec-content">
+                    <p><strong>Purpose:</strong> Teach WHAT they need to know, not HOW it works. Each secret should create an "aha" moment and handle objections inside the content.</p>
+
+                    <div class="code-example">SECRET 1: THE INVISIBLE CEILING (10 min)
+"Why Harder Work Doesn't Equal More Results"
+
+- Explain the subconscious income thermostat concept
+- Show them they have a "set point" they keep returning to
+- Use THEIR examples from the chat (you already ask for their goals)
+- Aha moment: "It's not that you're not capable. It's that your identity has a limit."
+
+Handle objection inside: "You might think 'I just need more discipline.' But discipline is a conscious mind tool. Your subconscious will always win."
+
+---
+
+SECRET 2: THE SABOTAGE PATTERN (10 min)
+"Why Your Mind Thinks Success Is Dangerous"
+
+- Explain why the subconscious equates growth with danger
+- Show the pattern: grow → sabotage → fall back → repeat
+- Case study: JC was stuck at $X, after hypnosis hit $221K
+  (ADD HIS STARTING POINT — e.g., "JC was stuck at $15K months for 2 years. After one month of hypnosis work, he produced $221K.")
+
+Handle objection inside: "You might think 'I don't sabotage myself.' But sabotage doesn't look like failure. It looks like procrastination, perfectionism, and 'just not feeling it.'"
+
+---
+
+SECRET 3: THE IDENTITY UPGRADE (10 min)
+"How to Reset Your Success Ceiling in Minutes, Not Years"
+
+- Introduce Hypnotic Abundance Programming™ (Release → Reprogram → Reinforce)
+- Explain that this is about changing IDENTITY, not just beliefs
+- Case study: Kim was about to quit, now selling $2M houses
+  (ADD HER STARTING POINT — e.g., "Kim was making $3K/month and ready to get a job. After hypnosis, she's now the top seller on her team.")
+
+Handle objection inside: "You might think 'This sounds too fast.' But your blocks were installed in minutes — in childhood moments you don't even remember. They can be uninstalled just as quickly."</div>
+
+                    <p><strong>Key Rule:</strong> Each secret should make them think "That explains everything!" — not "That's interesting information."</p>
+                </div>
+            </div>
+
+            <div class="rec-card">
+                <span class="rec-number">4</span>
+                <h3 class="rec-title">LIVE HYPNOSIS SESSION (20 minutes)</h3>
+                <div class="rec-content">
+                    <p><strong>Purpose:</strong> Give them a TASTE of the transformation. This is your superpower — use it strategically.</p>
+
+                    <div class="code-example">BEFORE THE HYPNOSIS:
+
+"In the next 20 minutes, I'm going to guide you through a live hypnosis session. This is the same process my private clients pay thousands for.
+
+You're going to experience what it feels like to have that ceiling start to crack.
+
+But here's the thing — this is just the beginning. One session can create a shift. But to fully dissolve the blocks and install a new identity, that takes the full process.
+
+Think of this as a taste. If you feel a shift today — and most of you will — imagine what's possible with the complete system."
+
+AFTER THE HYPNOSIS:
+
+[Give them 30 seconds of silence]
+
+"Welcome back. Take a breath. Notice how you feel.
+
+Drop in the chat — one word to describe what you're feeling right now."
+
+[Let them share — this builds social proof in real-time]
+
+"What you just experienced is what happens when we access the subconscious directly. You felt that shift. That crack in the ceiling.
+
+Now imagine doing this every week for 12 weeks. Imagine systematically dissolving every block, installing a new identity, and having support every step of the way.
+
+That's what I want to talk to you about next."</div>
+                </div>
+            </div>
+
+            <div class="rec-card">
+                <span class="rec-number">5</span>
+                <h3 class="rec-title">THE OFFER + THE STACK (15 minutes)</h3>
+                <div class="rec-content">
+                    <p><strong>Purpose:</strong> Build value layer by layer. Never reveal price until total value is 3-4X the investment.</p>
+
+                    <div class="code-example">TRANSITION TO OFFER:
+
+"So here's the question: What would it be worth to you to finally break through that ceiling?
+
+Not just crack it — but demolish it completely. And have it stay demolished.
+
+That's what Million Dollar Mindframe is designed to do."
+
+---
+
+THE STACK:
+
+"Let me show you everything you get:
+
+CORE: Million Dollar Mindframe — 12-Week Subconscious Reprogramming Program
+This is the complete system for identifying and dissolving your blocks, installing a new identity, and reinforcing it until it becomes automatic.
+Value: $12,000
+
+BONUS 1: 12 Weekly Live Group Hypnosis Sessions
+Every week, I personally guide you through targeted hypnosis for specific blocks — money blocks, visibility blocks, sales blocks.
+Value: $4,800
+
+BONUS 2: The Hypnosis Library (Lifetime Access)
+24/7 access to my complete library of recorded sessions. Use them anytime you need a reset.
+Value: $2,997
+
+BONUS 3: 3 Months Telegram Coaching Access
+Direct access to me. When a block comes up, you don't wait — you message me and we handle it.
+Value: $1,500
+
+BONUS 4: The Belief Tracking System
+The exact system my private clients use to track their transformation. You'll see your blocks dissolving in real-time.
+Value: $597
+
+TOTAL VALUE: $21,794"
+
+---
+
+PRICE REVEAL (BARI MODEL):
+
+"Now, my private 1:1 clients pay $15,000-$25,000 for this level of transformation.
+
+But because you showed up today, because you experienced this live, and because I want to work with entrepreneurs who are ready...
+
+Your investment for everything I just showed you is not $21,794.
+
+It's not $15,000.
+
+It's not even $10,000.
+
+It's just $2,000 per month for 3 months.
+
+That's $6,997 total on a payment plan.
+
+OR — pay in full and SAVE $1,000.
+
+$5,997 pays in full. One payment. Done.
+
+Here's how it works:
+
+To reserve your spot right now, put down a $597 deposit.
+
+That locks in your spot for this cohort.
+
+Then on our call, we'll finalize whether you want to do pay-in-full or the payment plan."
+
+---
+
+WHY THIS PRICING WORKS:
+
+1. LEAD WITH MONTHLY: "$2,000/month" sounds accessible
+2. PIF INCENTIVE: "Save $1,000" creates urgency to pay in full
+3. DEPOSIT LOWERS BARRIER: $597 is easier than $6K decision
+4. DEPOSIT = COMMITMENT: People who pay $597 convert at 70-80% on the call
+5. CALL BECOMES ENROLLMENT: Not convincing them on price — they already committed
+
+---
+
+RISK REVERSAL:
+
+"And here's the thing — even if you join and decide within 14 days it's not for you, you KEEP the Hypnosis Library, the Belief Tracking System, and all the resources.
+
+They're yours forever, no matter what.
+
+I do this because I'm that confident this will work for you."</div>
+                </div>
+            </div>
+
+            <div class="rec-card">
+                <span class="rec-number">6</span>
+                <h3 class="rec-title">SCARCITY + 3-STEP CTA (10 minutes)</h3>
+                <div class="rec-content">
+                    <p><strong>Purpose:</strong> Create real urgency and walk them through exactly what to do.</p>
+
+                    <div class="code-example">SCARCITY (must be REAL):
+
+"Now, I can only take 10 new MDM clients this cohort. That's it. After that, you're waiting 8 weeks for the next round.
+
+And the way to reserve your spot is simple..."
+
+---
+
+THE $597 DEPOSIT CTA:
+
+"Put down your $597 deposit right now.
+
+That $597 locks in your spot for this cohort.
+
+Then we'll get on a quick call to:
+1. Confirm you're a good fit
+2. Decide if you want pay-in-full ($5,997) or the payment plan ($6,997)
+3. Get you started immediately
+
+Here's the link — click it now, put down your $597, and I'll see you on our enrollment call."
+
+[PUT LINK IN CHAT]
+
+"I'll wait while you secure your spot."
+
+[PAUSE 30 SECONDS — ACTUALLY WAIT]
+
+"I can see deposits coming in — we're down to 7 spots. If you're serious about breaking through your ceiling in the next 90 days, lock in your spot now."
+
+---
+
+WHY THE DEPOSIT MODEL WORKS:
+
+1. $597 is easier than a $6K decision in the moment
+2. People who pay $597 are pre-committed (70-80% close on the call)
+3. The call becomes about FIT, not convincing them on price
+4. You filter out tire-kickers before wasting time on calls
+5. Real scarcity: 10 spots per cohort, enforced by deposit limit</div>
+                </div>
+            </div>
+
+            <div class="rec-card">
+                <span class="rec-number">7</span>
+                <h3 class="rec-title">Q&A + FINAL CLOSE (10 minutes)</h3>
+                <div class="rec-content">
+                    <p><strong>Purpose:</strong> Handle remaining objections, create final urgency.</p>
+
+                    <div class="code-example">Q&A STRUCTURE:
+
+Take 3-5 questions, but reframe each one as a buying question:
+
+Q: "How long until I see results?"
+A: "Most clients feel a shift in the first session. Real measurable results — revenue increases, bigger deals — typically within 30-60 days. JC hit $221K in his first month."
+
+Q: "What if I've tried hypnosis before?"
+A: "Generic hypnosis is like generic medicine. This is targeted specifically at income ceiling blocks for entrepreneurs. It's not the same thing."
+
+Q: "I'm not sure I can afford it right now."
+A: "I understand. But let me ask you — what is staying stuck at your current income costing you every month? If you're leaving $5K-$10K on the table because of these blocks, the program pays for itself immediately."
+
+---
+
+FINAL CLOSE:
+
+"We're almost out of time. Here's where we are:
+
+[X] spots left this week for audit calls.
+
+If you felt something shift during the hypnosis today...
+If you recognized yourself in the patterns I described...
+If you're ready to finally break through that ceiling...
+
+Click the link. Book your call. Let's see if this is right for you.
+
+I'll see you on the call."</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="post-webinar" class="section section-red">
+    <div class="container">
+        <h2>POST-WEBINAR SEQUENCE</h2>
+
+        <div class="roi-table">
+            <div class="roi-row">
+                <span>Current Post-Webinar Emails:</span>
+                <span>3 generic emails</span>
+            </div>
+            <div class="roi-row">
+                <span>Recommended:</span>
+                <span>7-day urgency escalation sequence</span>
+            </div>
+            <div class="roi-row">
+                <span>Opportunity:</span>
+                <span>+$50,000-$100,000/Quarter in Recovered Revenue</span>
+            </div>
+        </div>
+
+        <div class="key-insight" style="background: rgba(0,0,0,0.3);">
+            <h4>THE POST-WEBINAR STRATEGY PROBLEM</h4>
+            <p><strong>Current issue:</strong> You offer a 48-hour replay and say "book a call." But what's the urgency to book? If I can watch the replay for 48 hours, I'll "think about it"... and never book. <strong>The replay and the CTA are working AGAINST each other.</strong> The urgency must be on CALL SLOTS + COHORT START, not on the replay expiring.</p>
+        </div>
+
+        <div class="recommendations">
+
+            <div class="rec-card">
+                <span class="rec-number">1</span>
+                <h3 class="rec-title">THE URGENCY FRAMEWORK</h3>
+                <div class="rec-content">
+                    <p>The replay is a TOOL to help them decide. The urgency is on something ELSE.</p>
+
+                    <div class="code-example">WHAT CREATES URGENCY TO BOOK A CALL?
+
+❌ "Replay expires in 48 hours"
+   → This creates urgency to WATCH, not to BOOK
+   → They watch, feel good, and still don't book
+
+✅ "I only have 10 call slots this week"
+   → Creates urgency to BOOK NOW
+   → Call slots are scarce, not the replay
+
+✅ "This cohort starts March 28 — after that, you wait 8 weeks"
+   → Creates deadline pressure
+   → Miss this cohort = wait 2 months
+
+✅ "Book by Friday and get [fast-action bonus]"
+   → Rewards fast action
+   → Bonus disappears if they wait
+
+---
+
+THE CORRECT FRAMING:
+
+"The replay is available for 48 hours so you can re-watch
+and remember what you felt during the hypnosis.
+
+But here's the thing — I only have 10 call slots this week.
+
+3 were already booked during the webinar.
+
+If you want to talk before this cohort starts on [date],
+grab your slot now."
+
+→ Replay = tool to help decide
+→ Urgency = limited call slots + cohort deadline</div>
+
+                    <div class="impact-badge">FIX THE URGENCY GAP</div>
+                </div>
+            </div>
+
+            <div class="rec-card">
+                <span class="rec-number">2</span>
+                <h3 class="rec-title">7-DAY POST-WEBINAR SEQUENCE (Book-a-Call Model)</h3>
+                <div class="rec-content">
+                    <p>Urgency escalates on CALL SLOTS and COHORT DEADLINE — not on replay.</p>
+
+                    <div class="code-example">DAY 1 (Immediately after webinar):
+Subject: "Your replay + 7 call slots left this week"
+
+"Hey [Name],
+
+You felt something shift today. I saw it in the chat.
+
+Your replay is ready — watch it anytime in the next 48 hours:
+[REPLAY LINK]
+
+But here's what I need you to know:
+
+I only have 10 call slots this week.
+3 were booked during the webinar.
+7 left.
+
+This cohort of MDM starts [DATE].
+After that, you're waiting 8 weeks for the next one.
+
+If you're serious about breaking through your income ceiling,
+grab your call slot now:
+[BOOK CALL LINK]
+
+Talk soon,
+Julia"
+
+---
+
+DAY 2 (Morning):
+Subject: "5 call slots left — here's what happens on the call"
+
+→ Explain what the call IS (not a pitch, a diagnosis)
+→ Case study: Someone who was skeptical, booked anyway, transformed
+→ "5 slots remaining — [BOOK LINK]"
+
+---
+
+DAY 2 (Evening — Replay reminder):
+Subject: "Replay expires tomorrow — did you re-watch the hypnosis?"
+
+→ Short email: "I want you to remember what you felt"
+→ Replay link
+→ "After you watch, book your call: [LINK]"
+→ "4 slots left"
+
+---
+
+DAY 3 (Replay expires):
+Subject: "Replay is gone — but your call slot isn't (yet)"
+
+→ "The replay expired. But you can still book a call."
+→ "If you missed the hypnosis, that's exactly why we should talk —
+   I can do a mini-session on our call so you can feel what it's like."
+→ Case study
+→ "3 call slots remaining"
+
+---
+
+DAY 4:
+Subject: "The real cost of staying stuck another month"
+
+→ ROI math: "If you're at $10K/month and should be at $25K..."
+→ "$15K/month × 3 months = $45K lost while you 'think about it'"
+→ "I've seen entrepreneurs lose YEARS to this ceiling."
+→ "2 call slots left this week"
+
+---
+
+DAY 5:
+Subject: "Why [Name] almost didn't book — and what happened when she did"
+
+→ Full case study: Someone who hesitated, almost didn't book
+→ What changed for them
+→ Their exact results
+→ "2 slots remaining — one could be yours"
+
+---
+
+DAY 6:
+Subject: "Final call slots — cohort closes in 48 hours"
+
+→ "This is it. 2 spots left."
+→ "The March cohort of MDM starts in 48 hours."
+→ "After that, you're waiting until [DATE] for the next one."
+→ Summary of everything they get
+→ Clear CTA
+
+---
+
+DAY 7 (Final):
+Subject: "Last slot — closes tonight at midnight"
+
+→ "1 slot left. That's it."
+→ "At midnight, enrollment closes for this cohort."
+→ "If you've been thinking about this all week — this is your sign."
+→ "Click here to book your call: [LINK]"
+→ "After tonight, the next opportunity is [DATE]."</div>
+
+                    <div class="impact-badge">+$50K-100K/QUARTER</div>
+                </div>
+            </div>
+
+            <div class="rec-card">
+                <span class="rec-number">3</span>
+                <h3 class="rec-title">7-DAY POST-WEBINAR SEQUENCE (Deposit Model)</h3>
+                <div class="rec-content">
+                    <p>If you test the deposit model, the urgency is on COHORT SPOTS — not call slots.</p>
+
+                    <div class="code-example">DAY 1 (Immediately after webinar):
+Subject: "7 spots left in the March cohort"
+
+"Hey [Name],
+
+You felt the shift today. I know you did.
+
+Your replay is ready — re-watch anytime in the next 48 hours:
+[REPLAY LINK]
+
+But here's what matters:
+
+I only have 10 spots in this cohort.
+3 were claimed during the webinar.
+7 left.
+
+To lock in your spot: put down $597.
+That's it. $597 reserves your seat.
+
+Then we'll hop on a quick call to finalize everything.
+
+Click here to secure your spot:
+[DEPOSIT LINK]
+
+This cohort starts [DATE]. After that, you wait 8 weeks.
+
+Julia"
+
+---
+
+DAY 2-7: Same escalation pattern but CTA is always:
+"Put down your $597 to lock your spot"
+NOT "book a call"
+
+---
+
+KEY DIFFERENCE:
+
+Book-a-Call Model:
+→ Urgency = limited CALL SLOTS
+→ CTA = "Book your call"
+
+Deposit Model:
+→ Urgency = limited COHORT SPOTS
+→ CTA = "Put down $597 to lock your spot"</div>
+
+                    <div class="impact-badge">DEPOSIT MODEL VERSION</div>
+                </div>
+            </div>
+
+            <div class="rec-card">
+                <span class="rec-number">4</span>
+                <h3 class="rec-title">ESCALATING URGENCY PATTERN</h3>
+                <div class="rec-content">
+                    <p>Urgency must ESCALATE across the 7 days. The TWO urgency drivers work together:</p>
+
+                    <table class="benchmark-table">
+                        <thead>
+                            <tr>
+                                <th>Day</th>
+                                <th>Slots Left</th>
+                                <th>Cohort Countdown</th>
+                                <th>Primary Message</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>7 slots</td>
+                                <td>7 days</td>
+                                <td>"Replay is live + 7 slots left"</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>5 slots</td>
+                                <td>6 days</td>
+                                <td>"Here's what happens on the call"</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>4 slots</td>
+                                <td>5 days</td>
+                                <td>"Replay gone — slot still available"</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>3 slots</td>
+                                <td>4 days</td>
+                                <td>"Cost of staying stuck"</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>2 slots</td>
+                                <td>3 days</td>
+                                <td>"Case study + only 2 left"</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>2 slots</td>
+                                <td>48 hours</td>
+                                <td>"Final slots — cohort closes soon"</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>1 slot</td>
+                                <td>TONIGHT</td>
+                                <td>"Last slot — closes at midnight"</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="code-example">TWO URGENCY DRIVERS WORKING TOGETHER:
+
+1. CALL SLOTS (or COHORT SPOTS for deposit model)
+   → "Only 7 slots left" → "Only 3 left" → "Last slot"
+   → Creates immediate scarcity
+
+2. COHORT DEADLINE
+   → "Cohort starts in 7 days" → "48 hours" → "Tonight at midnight"
+   → Creates time pressure
+
+WHY BOTH MATTER:
+→ Slots alone = "I'll grab one later"
+→ Deadline alone = "There's still time"
+→ BOTH = "Slots are filling AND time is running out"</div>
+
+                    <p><strong>Critical Rule:</strong> These numbers must be REAL. If you say 10 spots per cohort, have 10 spots. Fake scarcity destroys trust and tanks conversions long-term.</p>
+
+                    <div class="impact-badge">DUAL URGENCY DRIVERS</div>
+                </div>
+            </div>
+
+            <div class="rec-card">
+                <span class="rec-number">5</span>
+                <h3 class="rec-title">30-DAY NURTURE FOR NON-BUYERS</h3>
+                <div class="rec-content">
+                    <p>After the 7-day sequence, segment non-buyers into a nurture sequence that invites them to the next webinar:</p>
+
+                    <div class="code-example">30-DAY NURTURE (Days 8-30):
+
+Week 2: Value email — "3 signs your subconscious is sabotaging your income"
+Week 2: Case study — Different transformation story
+Week 3: Value email — "The morning routine that reprograms your subconscious"
+Week 3: Invitation — "Next live session is [date]"
+Week 4: Re-engagement — "Are you still hitting the same ceiling?"
+Week 4: Final invitation to next webinar</div>
+
+                    <div class="impact-badge">CAPTURES LATE CONVERTERS</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="sales-process" class="section">
+    <div class="container">
+        <h2>SALES PROCESS OPTIMIZATION</h2>
+
+        <div class="roi-table">
+            <div class="roi-row">
+                <span>Current Close Rate:</span>
+                <span>~15% (10 closes from ~65 qualified calls)</span>
+            </div>
+            <div class="roi-row">
+                <span>Target Close Rate:</span>
+                <span>25-30% (Book-a-Call) or 60-80% (Deposit Model)</span>
+            </div>
+            <div class="roi-row">
+                <span>Opportunity:</span>
+                <span class="roi-value">+67% to +300% More Sales</span>
+            </div>
+        </div>
+
+        <div class="key-insight">
+            <h4>TWO SALES MODELS TO TEST</h4>
+            <p>There are two approaches to closing high-ticket offers from webinars. You can continue with the traditional "Book a Call" model and optimize it, OR test the "Deposit Model" (used by Tony Robbins, Bari, and other high-volume closers). We recommend testing both to see which converts better for your audience.</p>
+        </div>
+
+        <div class="recommendations">
+
+            <div class="rec-card">
+                <span class="rec-number">1</span>
+                <h3 class="rec-title">MODEL A: BOOK-A-CALL (Current Approach — Optimized)</h3>
+                <div class="rec-content">
+                    <p>This is your current model. Keep it, but optimize it with these changes:</p>
+
+                    <div class="code-example">HOW IT WORKS:
+Webinar → "Book a call" → Reveal price on call → Close on call
+
+CURRENT PROBLEM:
+- You say: "I'm going to open up some places for you to call me"
+- No urgency, no scarcity, no clear next step
+- The call does ALL the heavy lifting (build value, reveal price, handle objections, close)
+- Result: 7.2% booking rate, 15% close rate
+
+OPTIMIZED VERSION:
+
+1. BUILD THE STACK ON THE WEBINAR
+   → Show all the value (Core program + bonuses)
+   → Anchor total value at $20,000+
+   → Don't reveal exact price — tease it
+
+2. ADD URGENCY TO THE CTA
+   → "I only have 10 call slots this week"
+   → "Calls are first-come, first-serve"
+   → "If you're serious about breaking through, grab your slot now"
+
+3. ADD QUALIFICATION QUESTIONS ON BOOKING PAGE
+   → Current income
+   → Investment readiness (1-10)
+   → Filters tire-kickers before you waste time
+
+4. SEND PRE-CALL VIDEO
+   → Sets expectations
+   → Pre-sells the transformation
+   → Increases show-up rate
+
+EXPECTED RESULTS:
+- Booking rate: 7% → 12-15%
+- Call show-up: 75% → 85%
+- Close rate: 15% → 25-30%</div>
+
+                    <div class="impact-badge">LOWER RISK — OPTIMIZE CURRENT MODEL</div>
+                </div>
+            </div>
+
+            <div class="rec-card">
+                <span class="rec-number">2</span>
+                <h3 class="rec-title">MODEL B: DEPOSIT MODEL (Tony Robbins / Bari Style)</h3>
+                <div class="rec-content">
+                    <p>This model is used by Tony Robbins, Bari, and high-volume closers. Instead of booking a call, attendees put down a small deposit to reserve their spot. The call becomes an enrollment conversation, not a sales pitch.</p>
+
+                    <div class="code-example">HOW IT WORKS:
+Webinar → Stack → Price reveal → Small deposit → Enrollment call
+
+THE PSYCHOLOGY:
+- People take action at PEAK enthusiasm (end of webinar)
+- Small deposit = easy "yes" in the moment
+- Once they've paid, they're committed (consistency principle)
+- Call is about FIT, not convincing them on price
+- Close rate jumps from 15-20% to 60-80%
+
+THE WEBINAR PITCH:
+
+"Your investment for everything I just showed you...
+
+It's not $20,000.
+It's not $15,000.
+It's not even $10,000.
+
+It's just $2,000 per month for 3 months. That's $6,997 total.
+
+Or pay in full today for $5,997 — save $1,000.
+
+But here's the thing — I only take 10 clients per cohort.
+
+To reserve your spot right now, it's super easy to get started.
+
+Just put down $597. That's it.
+
+$597 locks in your spot. First come, first serve.
+
+Then we'll hop on a quick call to make sure we're a good fit
+and figure out if you want to do pay-in-full or the payment plan.
+
+Click the link. Put down your $597. I'll see you on the enrollment call."
+
+---
+
+WHY $597 (NOT $997):
+- $597 feels like "easy to get started"
+- Low enough to be impulse decision at peak excitement
+- High enough to filter out tire-kickers
+- NOT so high they overthink it
+
+---
+
+THE ENROLLMENT CALL (NOT a sales call):
+- They already said YES (they paid $597)
+- Call is about: "Let's make sure this is right for you"
+- Finalize payment plan (PIF $5,997 or payment plan $6,997)
+- Handle any final questions
+- Get them started
+
+EXPECTED RESULTS:
+- Deposit conversion: 5-10% of attendees
+- Call show-up: 90%+ (they paid money)
+- Close rate: 60-80% (they're pre-committed)</div>
+
+                    <div class="impact-badge">HIGHER RISK — HIGHER REWARD</div>
+                </div>
+            </div>
+
+            <div class="rec-card">
+                <span class="rec-number">3</span>
+                <h3 class="rec-title">COMPARISON: WHICH MODEL TO USE?</h3>
+                <div class="rec-content">
+
+                    <table class="benchmark-table">
+                        <thead>
+                            <tr>
+                                <th>Factor</th>
+                                <th>Book-a-Call</th>
+                                <th>Deposit Model</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Barrier to action</td>
+                                <td>Low (free call)</td>
+                                <td>Medium ($597)</td>
+                            </tr>
+                            <tr>
+                                <td>Lead quality</td>
+                                <td>Mixed (tire-kickers + buyers)</td>
+                                <td>High (only serious buyers)</td>
+                            </tr>
+                            <tr>
+                                <td>Call volume</td>
+                                <td>Higher (more calls)</td>
+                                <td>Lower (fewer calls)</td>
+                            </tr>
+                            <tr>
+                                <td>Close rate</td>
+                                <td>15-30%</td>
+                                <td>60-80%</td>
+                            </tr>
+                            <tr>
+                                <td>Time investment</td>
+                                <td>High (many calls)</td>
+                                <td>Low (fewer, better calls)</td>
+                            </tr>
+                            <tr>
+                                <td>Enthusiasm retention</td>
+                                <td>Fades between webinar and call</td>
+                                <td>Locked in at peak</td>
+                            </tr>
+                            <tr>
+                                <td>Best for</td>
+                                <td>Relationship-heavy sales</td>
+                                <td>Efficiency + scale</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p><strong>Recommendation:</strong> Test both. Run 4 webinars with Book-a-Call, then 4 webinars with Deposit Model. Compare total revenue, not just conversion rates.</p>
+
+                    <div class="impact-badge">A/B TEST BOTH MODELS</div>
+                </div>
+            </div>
+
+            <div class="rec-card">
+                <span class="rec-number">4</span>
+                <h3 class="rec-title">RESTRUCTURE THE WEBINAR PITCH (Critical Fix)</h3>
+                <div class="rec-content">
+                    <p><strong>This is the root cause of your sales call struggles.</strong> Your webinar pitch is too weak, so the call has to do ALL the work. Here's how to fix it:</p>
+
+                    <div class="code-example">CURRENT WEBINAR PITCH (What You Say Now):
+
+"Finally, I'm going to open up some places for you to call me
+and see if it makes sense for me to hypnotize you...
+
+You'll have the opportunity to send that call later.
+It'll be a few places because it'll be with me, not with my team.
+
+So, this is your chance to chat with me and explore working with me
+and see if it makes sense. They go by quickly."
+
+---
+
+WHY THIS DOESN'T WORK:
+
+❌ No stack — they don't know what they're getting
+❌ No price — complete unknown, creates anxiety
+❌ No urgency — "they go by quickly" is vague
+❌ No value anchor — nothing to compare against
+❌ Unclear purpose — "see if it makes sense" = wishy-washy
+❌ Result: The call does 100% of the selling</div>
+
+                    <div class="crisis-box">
+                        <h3>WHAT HAPPENS ON YOUR CALLS BECAUSE OF THIS</h3>
+                        <p>In your real sales call (Robin), she's STILL asking basic questions 30 minutes in: "Is it customized to me?" "How long does it take?" "Is it limited?" — These should be answered ON THE WEBINAR, not on the call. You're starting from zero every single call.</p>
+                    </div>
+
+                    <div class="code-example">RESTRUCTURED WEBINAR PITCH — PATH A (Book-a-Call)
+============================================================
+
+Use this if you want to keep the call but make it easier:
+
+---
+
+[After the live hypnosis, after Q&A]
+
+"So here's what I want to share with you...
+
+For those of you who felt something shift today — and I saw the
+comments, I know many of you did — I want to tell you about how
+we can make that shift PERMANENT.
+
+[INTRODUCE THE PROGRAM]
+
+It's called Million Dollar Mindframe. It's a 12-week intensive
+where I personally work with you to dissolve your subconscious
+income ceiling.
+
+[BUILD THE STACK]
+
+Here's what you get:
+
+PILLAR 1: The Subconscious Clearing
+→ We go deep into your limiting beliefs and remove them at the root
+→ Not surface-level mindset work — real subconscious reprogramming
+→ This is what takes most people YEARS in therapy — we do it in weeks
+
+PILLAR 2: Million Dollar Mindframe Installation
+→ Weekly live group hypnosis sessions with me — every Saturday
+→ I install the beliefs of successful entrepreneurs directly into your subconscious
+→ Confidence, certainty, action-taking — all programmed in
+
+PILLAR 3: Direct Access + Support
+→ Private Telegram access to me, Monday through Friday
+→ When blocks come up, you message me, we handle it
+→ Plus the full MDM audio library — 20+ hypnosis sessions for everything
+  from motivation to relationships to health
+
+[ANCHOR THE VALUE]
+
+Now, my private 1:1 clients pay $15,000 to $25,000 for this level
+of transformation.
+
+If you added up everything I just described — the weekly sessions,
+the direct access, the full library — we're talking over $20,000
+in value.
+
+[REVEAL THE INVESTMENT]
+
+But for those of you here today, your investment for the full
+12-week MDM program...
+
+It's not $20,000.
+It's not $15,000.
+It's not even $10,000.
+
+It's $5,997.
+
+Or if that's easier as a payment plan — $6,997 split into 3 payments.
+
+[CREATE SCARCITY]
+
+Now, I can only take 10 new clients per cohort.
+
+That's it. After that, you're waiting 8 weeks for the next round.
+
+[THE CTA]
+
+Here's what I want you to do:
+
+If you felt something shift today...
+If you recognized your patterns in what I described...
+If you're ready to finally break through your income ceiling...
+
+I want to invite you to book a call with me.
+
+This isn't a sales pitch call. I already told you the price.
+
+This call is for us to:
+1. Look at YOUR specific situation
+2. Identify YOUR exact blocks
+3. Decide together if MDM is the right fit for you
+
+I have 12 call slots open this week. Click the link in the chat.
+
+[PUT LINK IN CHAT]
+
+Book your call. I'll see you there."
+
+---
+
+WHY THIS WORKS:
+
+✅ They know what MDM is (12-week program, 3 pillars)
+✅ They know the value ($20K+ anchored)
+✅ They know the price ($5,997 PIF or $6,997 payment plan)
+✅ They know it's limited (10 spots)
+✅ They know what the call is FOR (fit, not price reveal)
+✅ Result: Call is 30 min confirmation, not 60 min pitch</div>
+
+                    <div class="code-example">RESTRUCTURED WEBINAR PITCH — PATH B (Deposit Model)
+============================================================
+
+Use this if you want to test collecting deposits on the webinar:
+
+---
+
+[Same stack and value build as Path A, then...]
+
+[REVEAL THE INVESTMENT]
+
+Your investment for everything I just described...
+
+It's not $20,000.
+It's not $15,000.
+It's not even $10,000.
+
+It's just $2,000 per month for 3 months. That's $6,997 total.
+
+Or pay in full for $5,997 — save $1,000.
+
+[CREATE SCARCITY]
+
+Now here's the thing — I only take 10 clients per cohort.
+
+First come, first serve. When they're gone, they're gone.
+Next cohort is 8 weeks away.
+
+[THE DEPOSIT CTA]
+
+Here's how to reserve your spot right now:
+
+It's super easy to get started.
+
+Put down $597. That's it. $597 locks in your spot.
+
+Then we'll hop on a quick call to:
+1. Make sure we're a good fit
+2. Answer any final questions
+3. Figure out if you want pay-in-full or the payment plan
+
+Click the link. Put down your $597. First 10 people to do it
+are in this cohort.
+
+[PUT LINK IN CHAT]
+
+I'll wait while you secure your spot.
+
+[PAUSE — ACTUALLY WAIT 30 SECONDS]
+
+I can see deposits coming in — we're down to 7 spots.
+
+If you're serious about breaking through your ceiling in the
+next 90 days, grab your spot now."
+
+---
+
+WHY THIS WORKS:
+
+✅ They take action at PEAK enthusiasm (right now)
+✅ $597 is easy — not a $6K decision in the moment
+✅ Once they pay, they're committed
+✅ Call becomes enrollment, not selling
+✅ You only talk to people who already said YES
+✅ Close rate jumps to 60-80%</div>
+
+                    <div class="key-insight">
+                        <h4>THE BOTTOM LINE</h4>
+                        <p>Your webinar pitch is currently doing 10% of the selling. It needs to do 80%. Whether you use Path A (book-a-call) or Path B (deposit), the webinar must cover: THE STACK, THE VALUE, THE PRICE, THE SCARCITY. Then the call becomes easy.</p>
+                    </div>
+
+                    <div class="impact-badge">THIS IS THE #1 FIX FOR YOUR FUNNEL</div>
+                </div>
+            </div>
+
+            <div class="rec-card">
+                <span class="rec-number">6</span>
+                <h3 class="rec-title">OPTIMIZED SALES CALL SCRIPT (For Webinar Attendees)</h3>
+                <div class="rec-content">
+                    <p>Your current script is 60 minutes and treats everyone like a cold lead. But webinar attendees are WARM — they just spent 90 minutes with you and experienced the hypnosis. Here's an optimized 30-40 minute script:</p>
+
+                    <div class="code-example">OPTIMIZED CALL STRUCTURE (30-40 min total)
+
+============================================================
+PHASE 1: WARM RECONNECT (5 min)
+============================================================
+
+"Hey [Name]! So good to connect with you. I saw you were at the
+masterclass on [day] — what did you think?"
+
+[LET THEM TALK — they'll tell you what resonated]
+
+"That's amazing. And I'm curious — during the live hypnosis,
+did you feel anything shift?"
+
+[This is gold — they'll relive the experience and re-sell themselves]
+
+WHY THIS WORKS:
+→ You're not starting from zero
+→ They remember the feeling
+→ They tell YOU why they're interested
+
+============================================================
+PHASE 2: QUICK DISCOVERY (10 min)
+============================================================
+
+"So tell me — what made you book this call? What are you hoping
+to get out of working together?"
+
+[Let them talk. Take notes.]
+
+"And what's been the biggest thing holding you back from hitting
+[their goal]?"
+
+[You're confirming what you already know from webinar, not digging
+for 25 minutes]
+
+"If we could dissolve that block completely — what would that
+mean for your business? Your life?"
+
+[Get them to paint the picture]
+
+THEN ASK:
+"On a scale of 1-10, how committed are you to breaking through
+this ceiling in the next 90 days?"
+
+[If 7+, move forward. If below 7, dig: "What would make it a 10?"]
+
+============================================================
+PHASE 3: BRIDGE TO OFFER (5 min)
+============================================================
+
+"So here's what I'm hearing: You've been stuck at [income/situation],
+you know something subconscious is blocking you, and you felt a
+real shift during the session. Does that sound right?"
+
+[Yes]
+
+"Perfect. So let me tell you how we'd work together to make that
+shift permanent..."
+
+[SHORT pitch — they already saw the stack on the webinar]
+
+"MDM is a 12-week intensive where we go deep into your subconscious
+programming. You get:
+
+→ Weekly live group hypnosis sessions with me
+→ Private 1:1 sessions for your specific blocks
+→ The full MDM training library
+→ Daily Telegram access to me
+
+You already felt what one session can do. Imagine 12 weeks of that,
+targeting your exact blocks."
+
+============================================================
+PHASE 4: PRICE + CLOSE (10 min)
+============================================================
+
+"So the investment for everything I just described..."
+
+[Pause. Breathe. Calm.]
+
+"It's $2,000 per month for 3 months. That's $6,997 total.
+
+Or if you want to pay in full today, it's $5,997 — you save $1,000."
+
+[STOP TALKING. Let them respond.]
+
+---
+
+IF THEY SAY YES:
+"Amazing. Let me send you the link right now and I'll stay on
+while you complete the enrollment."
+
+---
+
+IF THEY HESITATE:
+"I hear you. What's coming up for you right now?"
+
+[Handle the objection — see objection handlers below]
+
+---
+
+IF THEY SAY "I need to think about it":
+"Totally understand. Can I ask — what specifically do you need
+to think about? Is it the investment, the timing, or something else?"
+
+[Dig. Usually it's money or spouse.]
+
+============================================================
+PHASE 5: OBJECTION HANDLERS
+============================================================
+
+MONEY OBJECTION:
+"I get it. Let me ask you this — what is staying stuck at your
+current income costing you every month? If you're leaving $5K-$10K
+on the table because of these blocks, the program pays for itself
+in the first month."
+
+"We also have a payment plan — $6,997 split into 3 payments. Would that
+make it easier to get started?"
+
+---
+
+SPOUSE OBJECTION:
+"Totally understand wanting to discuss with your partner.
+Here's what I'd suggest — what specifically would they want to know?
+Let's talk through it now so you can share it with them confidently."
+
+"And just so you know — spots fill up quickly. If you want, I can
+hold your spot for 24 hours while you discuss. Fair?"
+
+---
+
+"I NEED TO THINK ABOUT IT":
+"Of course. Can I ask — you've been thinking about this for a while,
+right? You came to the webinar, you booked a call...
+What would need to happen for this to be a clear yes?"
+
+[Listen. Address the real concern.]
+
+---
+
+TIMING OBJECTION:
+"When would be the right time? Here's the thing — your subconscious
+blocks don't take a break. Every month you wait is another month
+stuck at the same ceiling. What would need to change for the timing
+to feel right?"</div>
+
+                    <div class="key-insight">
+                        <h4>KEY DIFFERENCES FROM CURRENT SCRIPT</h4>
+                        <p>
+                        <strong>1. Leverage the webinar:</strong> Start with "What did you think of the session?" — not generic rapport.<br><br>
+                        <strong>2. Shorter discovery:</strong> They already know their problem. Confirm, don't re-excavate.<br><br>
+                        <strong>3. Skip the long pitch:</strong> They saw THE STACK. Summarize, don't re-present.<br><br>
+                        <strong>4. Price at minute 20, not minute 50:</strong> Less anxiety, more momentum.<br><br>
+                        <strong>5. Use their webinar experience:</strong> "You FELT the shift" — that's your best sales tool.
+                        </p>
+                    </div>
+
+                    <div class="impact-badge">CUTS CALL TIME 40% + INCREASES CLOSE RATE</div>
+                </div>
+            </div>
+
+            <div class="rec-card">
+                <span class="rec-number">7</span>
+                <h3 class="rec-title">PRE-CALL OPTIMIZATION (Both Models)</h3>
+                <div class="rec-content">
+                    <p>Regardless of which model you use, send a pre-call video to increase show-up and pre-sell:</p>
+
+                    <div class="code-example">PRE-CALL VIDEO (5 minutes):
+
+"Hey [Name], I'm so excited for our call on [date].
+
+Before we talk, I want to share what this call is about — and what it's NOT about.
+
+This call is about identifying your EXACT subconscious income ceiling
+and mapping out how we'd dissolve it together.
+
+This call is NOT a 'get to know you' chat.
+I'm going to ask you direct questions about your income, your blocks, and your goals.
+
+If you're not ready to be honest about where you are and where you want to go,
+this call isn't for you.
+
+But if you ARE ready... this could be the conversation that changes everything.
+
+See you on [date]."
+
+SEND THIS:
+- Immediately after they book (confirmation email)
+- 24 hours before the call (reminder email)
+- Include calendar link + Zoom link</div>
+
+                    <div class="impact-badge">+20% CALL SHOW-UP</div>
+                </div>
+            </div>
+
+            <div class="rec-card">
+                <span class="rec-number">8</span>
+                <h3 class="rec-title">NO-SHOW RECOVERY SEQUENCE</h3>
+                <div class="rec-content">
+                    <p>Your call show-up rate is 75%. That means 25% of booked calls don't show. Implement same-day follow-up:</p>
+
+                    <div class="code-example">NO-SHOW SEQUENCE:
+
+IMMEDIATELY (if no-show):
+Text: "Hey [Name], I was just on the call waiting for you.
+Everything okay? Let me know if you need to reschedule."
+
+2 HOURS LATER:
+Email: "I know life happens — here's a link to reschedule when you're ready: [link]"
+
+24 HOURS LATER:
+Email: "I still have 2 spots open this week if you want to reconnect: [link]"
+
+FOR DEPOSIT MODEL — Add urgency:
+"You've already secured your spot with your deposit. Let's make sure
+we get you started before the cohort fills up. Here's my calendar: [link]"</div>
+
+                    <div class="impact-badge">RECOVERS 50% OF NO-SHOWS</div>
+                </div>
+            </div>
+
+            <div class="rec-card">
+                <span class="rec-number">9</span>
+                <h3 class="rec-title">JULIA'S SPECIFIC QUESTIONS — ANSWERED</h3>
+                <div class="rec-content">
+
+                    <div class="code-example">Q: "Should I disclose the price on the webinar or just book calls?"
+
+A: TEST BOTH.
+   → Book-a-Call: Tease the value, reveal price on the call
+   → Deposit Model: Reveal price on webinar, collect deposit, call is enrollment
+   Run 4 webinars each way and compare total revenue.
+
+---
+
+Q: "Should I niche down to business owners or open it up to high achievers?"
+
+A: NICHE DOWN to entrepreneurs/business owners earning $50K-$250K+.
+   Your $5,000+ price requires buyers with income.
+   "High achievers" is too broad — it attracts people without money.
+   Lead with ENTREPRENEURS, use coaches as social proof.
+
+---
+
+Q: "What angle should I use? Anxiety? Perfectionism? Imposter syndrome?"
+
+A: INCOME CEILING is your angle.
+   It's specific, measurable, and implies ROI.
+   "Dissolve your subconscious income ceiling" > "Overcome imposter syndrome"
+   Imposter syndrome is a symptom. Income ceiling is the result they want to fix.
+
+---
+
+Q: "At what point are people deciding not to book?"
+
+A: At the END of your webinar.
+   Your current CTA is too soft: "I'll open up some places for you to call me."
+   Fix: Add real scarcity (10 spots), add urgency (cohort starts soon),
+   add clear 3-step CTA (click link → book/deposit → show up).
+
+---
+
+Q: "Should I also do 3-day events?"
+
+A: NOT YET.
+   Fix your webinar conversion first.
+   Your past 3-day event results (4 → 2 → 0 sales) suggest the offer
+   needs refinement before scaling to more complex formats.
+   Once webinar is converting at 15%+ booking rate, then test 3-day.</div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="roadmap" class="section">
+    <div class="container">
+        <h2>90-DAY IMPLEMENTATION ROADMAP</h2>
+
+        <div class="roadmap">
+
+            <div class="roadmap-phase">
+                <h4>MONTH 1: FOUNDATION (Weeks 1-4)</h4>
+                <ul class="check-list">
+                    <li><strong>Week 1:</strong> Landing page optimization — new headline, add bonus, transform testimonials</li>
+                    <li><strong>Week 1:</strong> Thank you page — add SMS opt-in, add bonus download, add 2nd qualification question</li>
+                    <li><strong>Week 1:</strong> Build VIP upsell page ($297) + record 4-5 base Daily Reset Audio templates</li>
+                    <li><strong>Week 2:</strong> Email deliverability audit — check SPF, DKIM, DMARC</li>
+                    <li><strong>Week 2:</strong> Add loss aversion to all reminder emails + record prep video</li>
+                    <li><strong>Week 3:</strong> Record the Block Recognition Audio (15-min guided self-reflection)</li>
+                    <li><strong>Week 3:</strong> Set up WhatsApp/SMS reminder automation</li>
+                    <li><strong>Week 4:</strong> Build 7-day post-webinar email sequence</li>
+                    <li><strong>Week 4:</strong> Update booking page with $597 deposit collection</li>
+                </ul>
+                <p><strong>Expected Impact:</strong> +30% show-up rate, +$1,500-3,000/webinar from VIP upsells</p>
+            </div>
+
+            <div class="roadmap-phase">
+                <h4>MONTH 2: WEBINAR + OFFER OPTIMIZATION (Weeks 5-8)</h4>
+                <ul class="check-list">
+                    <li><strong>Week 5:</strong> Restructure webinar with THE STACK value build</li>
+                    <li><strong>Week 5:</strong> Implement Bari pricing model — reveal price ON webinar, $597 deposit CTA</li>
+                    <li><strong>Week 6:</strong> Update pricing structure: $2,000/month × 3 = $6,997 OR $5,997 PIF</li>
+                    <li><strong>Week 6:</strong> Create pre-call qualification video</li>
+                    <li><strong>Week 7:</strong> Implement 3-step CTA at webinar end (link → deposit → call)</li>
+                    <li><strong>Week 7:</strong> Add no-show follow-up automation</li>
+                    <li><strong>Week 8:</strong> Analyze deposit conversion rate, adjust messaging</li>
+                </ul>
+                <p><strong>Expected Impact:</strong> +150% deposit collection, 70-80% close rate on depositors</p>
+            </div>
+
+            <div class="roadmap-phase">
+                <h4>MONTH 3: SCALE & OPTIMIZE (Weeks 9-12)</h4>
+                <ul class="check-list">
+                    <li><strong>Week 9:</strong> Build 30-day nurture sequence for non-buyers</li>
+                    <li><strong>Week 9:</strong> Implement VIP personal outreach for high-value prospects</li>
+                    <li><strong>Week 10:</strong> A/B test landing page headlines</li>
+                    <li><strong>Week 10:</strong> A/B test email subject lines</li>
+                    <li><strong>Week 11:</strong> Collect and format 5 new testimonials with specific dollar outcomes</li>
+                    <li><strong>Week 11:</strong> Create case study videos for booking page</li>
+                    <li><strong>Week 12:</strong> Full funnel analysis — identify next bottleneck</li>
+                    <li><strong>Week 12:</strong> Plan next quarter optimizations</li>
+                </ul>
+                <p><strong>Expected Impact:</strong> Full system operational, +$50K/month run rate</p>
+            </div>
+
+        </div>
+
+        <div class="roi-table">
+            <div class="roi-row">
+                <span>Current Monthly Revenue:</span>
+                <span>$18,720 (4.3 webinars × $4,320)</span>
+            </div>
+            <div class="roi-row">
+                <span>Month 1 Target:</span>
+                <span>$28,000 (+50%)</span>
+            </div>
+            <div class="roi-row">
+                <span>Month 2 Target:</span>
+                <span>$45,000 (+140%)</span>
+            </div>
+            <div class="roi-row">
+                <span>Month 3 Target:</span>
+                <span>$70,000+ (+274%)</span>
+            </div>
+            <div class="roi-row roi-highlight">
+                <span>90-Day Revenue Opportunity:</span>
+                <span>+$124,000 Additional Revenue</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="footer-cta">
+    <div class="container">
+        <h2>READY TO IMPLEMENT?</h2>
+        <p>Let's turn your $225K funnel into a $1M+ revenue machine.</p>
+        <p style="margin-top: 1rem;">That's <strong>+$842,400 annually</strong> (310% growth) from fixing call booking rate, post-webinar sequence, and positioning clarity.</p>
+        <p style="margin-top: 2rem; font-size: 1rem; opacity: 0.8;">The demand is there. The offer is proven. The only thing missing is the system to convert at scale.</p>
+    </div>
+</section>
+
+<footer style="padding: 2rem 0; text-align: center; color: var(--gray-medium); font-size: 0.85rem;">
+    <div class="container">
+        <p>Julia Hankins - Million Dollar Mindframe | Funnel Audit Proposal</p>
+        <p>Prepared by WeConquer Media | March 2026</p>
+    </div>
+</footer>
+
+</body>
+</html>
